@@ -1,0 +1,56 @@
+{
+  "phase": "E",
+  "name": "Runtime Alignment Layer",
+  "version": "1.0",
+  "altitude_band": "A2-A8",
+  "milestones": [
+    {
+      "id": "E0",
+      "title": "Substrate Sync & Anchor Registration",
+      "depends_on": ["D"],
+      "status": "pending"
+    },
+    {
+      "id": "E1",
+      "title": "Adapter Membrane Construction",
+      "adapters": ["operator", "firewall", "haptics", "topology"],
+      "status": "pending"
+    },
+    {
+      "id": "E2",
+      "title": "Canonical Visual Grammar Integration",
+      "grammar_file": "specs/visual_grammar.json",
+      "status": "pending"
+    },
+    {
+      "id": "E3",
+      "title": "HUD Routing & Emotional Physics",
+      "status": "pending"
+    },
+    {
+      "id": "E4",
+      "title": "XR/VR Transduction Surfaces",
+      "status": "pending"
+    },
+    {
+      "id": "E5",
+      "title": "Dashboard Controller (Governance Membrane)",
+      "status": "pending"
+    },
+    {
+      "id": "E6",
+      "title": "Godot Runtime Integration",
+      "status": "pending"
+    },
+    {
+      "id": "E7",
+      "title": "Documentation & Provenance",
+      "status": "pending"
+    },
+    {
+      "id": "E8",
+      "title": "Fantasy Engine v0.1 Release",
+      "status": "pending"
+    }
+  ]
+}
