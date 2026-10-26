@@ -1,0 +1,70 @@
+{
+  "phase": "E",
+  "tasks": [
+    {
+      "task": "Register operator anchor IDs",
+      "milestone": "E0",
+      "status": "todo"
+    },
+    {
+      "task": "Register curvature/spectral anchor IDs",
+      "milestone": "E0",
+      "status": "todo"
+    },
+    {
+      "task": "Implement operator_adapter.py",
+      "milestone": "E1",
+      "status": "todo"
+    },
+    {
+      "task": "Implement firewall_adapter.py",
+      "milestone": "E1",
+      "status": "todo"
+    },
+    {
+      "task": "Implement haptics_adapter.py",
+      "milestone": "E1",
+      "status": "todo"
+    },
+    {
+      "task": "Implement topology_adapter.py",
+      "milestone": "E1",
+      "status": "todo"
+    },
+    {
+      "task": "Integrate canonical visual grammar",
+      "milestone": "E2",
+      "status": "todo"
+    },
+    {
+      "task": "Build HUD emotional physics panel",
+      "milestone": "E3",
+      "status": "todo"
+    },
+    {
+      "task": "Build XR posture geometry surface",
+      "milestone": "E4",
+      "status": "todo"
+    },
+    {
+      "task": "Integrate dashboard_controller.py",
+      "milestone": "E5",
+      "status": "todo"
+    },
+    {
+      "task": "Bind adapters to Godot",
+      "milestone": "E6",
+      "status": "todo"
+    },
+    {
+      "task": "Write Phase E documentation",
+      "milestone": "E7",
+      "status": "todo"
+    },
+    {
+      "task": "Prepare v0.1 release notes",
+      "milestone": "E8",
+      "status": "todo"
+    }
+  ]
+}
