@@ -41,6 +41,8 @@ It consumes the substrate through a safe adapter membrane.
 🧩 Architecture
 
 `
+<pre>
+
 fun-sphere-fantasy-engine/
 │
 ├── godot/                 # Godot Mobile project (UI, HUD, glyphs)
@@ -62,6 +64,7 @@ fun-sphere-fantasy-engine/
 └── docs/
     ├── phase-E-runtime-alignment.md
     └── ui-grammar.md
+</pre>
 `
 
 This structure ensures:
