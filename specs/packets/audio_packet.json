@@ -1,0 +1,8 @@
+{
+  "packet_type": "audio_intensity",
+  "fields": {
+    "amplitude": "float",
+    "variance": "float"
+  },
+  "altitude_band": "A3"
+}
