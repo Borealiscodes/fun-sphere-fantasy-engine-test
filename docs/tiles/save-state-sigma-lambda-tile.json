@@ -1,0 +1,37 @@
+{
+  "tile": "save-state-sigma-lambda",
+  "background": "transparent",
+  "size": "1024x1024",
+  "quadrants": {
+    "top_left": {
+      "color": "#4A90E2",
+      "label": "Σ Snapshot Geometry",
+      "glyph": "manifold-slice"
+    },
+    "top_right": {
+      "color": "#50E3C2",
+      "label": "Λ Load Geometry",
+      "glyph": "inverse-operator"
+    },
+    "bottom_left": {
+      "color": "#9013FE",
+      "label": "Tensor Preservation",
+      "glyph": "tensor-grid"
+    },
+    "bottom_right": {
+      "color": "#F5A623",
+      "label": "Reversibility",
+      "glyph": "loop-arrow"
+    }
+  },
+  "centerpiece": {
+    "glyph": "80d-embedding",
+    "color": "#FFFFFF",
+    "opacity": 0.85
+  },
+  "provenance_ring": {
+    "color": "#CCCCCC",
+    "thickness": 12,
+    "label": "ΣΛ-GOV-20261028-A10"
+  }
+}
