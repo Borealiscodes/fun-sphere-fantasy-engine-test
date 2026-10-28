@@ -1,0 +1,170 @@
+% ============================================================
+% Governance-Only Spine — 45D Operator Layer
+% Fun-Sphere Fantasy Engine
+% Author: Borealis S. Hedling
+% ============================================================
+
+\section*{Governance Manifold}
+
+\[
+X_{45}
+\]
+
+\[
+\mathcal{R}_{FS} = (X_{45}, g_{FS}, \nabla_{FS}, \mathcal{H}_{FS})
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governance Operator}
+
+\[
+G : X_{44} \to X_{45}
+\]
+
+\[
+G(x) = \mathrm{Govern}(x)
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governed Connection}
+
+\[
+\nabla_{FS} = G \circ C \circ L_u
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governed Curvature Tensor}
+
+\[
+\mathcal{R}_{FS}(X,Y)Z
+= \nabla_X \nabla_Y Z
+- \nabla_Y \nabla_X Z
+- \nabla_{[X,Y]} Z
+\]
+
+\[
+\mathcal{R}_{FS}
+= G(C(L_u(\mathcal{R}_{42})))
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governed Holonomy}
+
+\[
+\mathcal{H}_{FS}
+= \mathrm{Hol}(\nabla_{FS})
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governance-Compatible Reversible Operators}
+
+\[
+\mathcal{G}_{rev}
+= \{ O \in \mathrm{Diff}(X_{45}) \mid O^{-1} \text{ exists} \}
+\]
+
+\[
+\mathfrak{g}_{rev}
+= \{ X \mid \exp(tX) \in \mathcal{G}_{rev} \}
+\]
+
+\[
+[X,Y] = XY - YX
+\]
+
+\[
+[G,X] = 0
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governed Narrative Curvature}
+
+\[
+\mathcal{N}(x)
+= G(C(L_u(x)))
+\]
+
+\[
+\mathcal{N}[x]
+= \int_{\gamma}
+g_{FS}(\mathcal{R}_{FS}(\dot{\gamma},\gamma), \gamma)\, dt
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governed Zone Physics}
+
+\[
+\mathcal{Z}_{rev} : Z_i \leftrightarrow Z_j
+\]
+
+\[
+G(Z_i) = G(Z_j)
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governed Ecology Physics}
+
+\[
+E_{spec}(v_k) = \lambda_k v_k
+\]
+
+\[
+v_k \in X_{45}
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governed Zone-Ecology Interaction}
+
+\[
+\frac{\partial Z}{\partial t}
+= H_Z(Z)
++ \lambda_k Z
++ \nabla_{FS} Z
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governance Stability Conditions}
+
+\[
+\lambda_k > 0
+\]
+
+\[
+\|G(Z)\| < \delta
+\]
+
+\[
+\mathcal{N}[x] < K
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governance Collapse Under Ternary Projection}
+
+\[
+\Pi(G(x)) = \Pi(x)
+\]
+
+\[
+\Pi(\mathcal{R}_{FS}) = 0
+\]
+
+\[
+\Pi(\mathcal{N}) = 0
+\]
+
+\[
+\Pi(\mathcal{G}_{rev}) = \emptyset
+\]
+
+% ============================================================
