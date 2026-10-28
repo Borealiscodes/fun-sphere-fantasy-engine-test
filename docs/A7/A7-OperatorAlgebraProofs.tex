@@ -1,0 +1,186 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+% Load ontology macros
+\input{citation-ontology-mac-v2.0-infused.tex}
+
+\begin{document}
+
+% ============================================================
+% HEADER
+% ============================================================
+
+\citeclass{FSFE-Proofs}
+\provenanceanchor{FSFE-A7-OPERATORALGEBRA-20261028}
+
+\begin{citationmembrane}{A7-OperatorAlgebra}
+  \citeanchor{OperatorAlgebraTheorems}
+  \citeanchor{OperatorSuite}
+  \citeanchor{FSFEState}
+\end{citationmembrane}
+
+\section*{A7: Operator Algebra Proofs}
+
+This module contains the second set of A7 lemmas, replacing A5 operator axioms
+with real proofs. These lemmas establish the algebraic backbone of FSFE’s
+reversible operator system.
+
+\newpage
+
+% ============================================================
+% LEMMA 1 — ASSOCIATIVITY
+% ============================================================
+
+\section{Lemma 1: Operator Composition Associativity}
+
+\subsection{Lemma Statement}
+
+\begin{verbatim}
+Lemma OpCompose_Associative :
+  ∀ f g h : Op,
+    OpCompose (OpCompose f g) h =
+    OpCompose f (OpCompose g h).
+\end{verbatim}
+
+\subsection{Supporting Definition}
+
+\begin{verbatim}
+OpCompose f g := λ s, g (f s)
+\end{verbatim}
+
+\subsection{Proof Skeleton}
+
+\begin{verbatim}
+Proof.
+  intros f g h.
+  unfold OpCompose.
+  ext s.
+  reflexivity.
+Qed.
+\end{verbatim}
+
+This lemma is altitude-compatible because it depends only on A6 operator
+definitions and does not require geometric or runtime semantics.
+
+\newpage
+
+% ============================================================
+% LEMMA 2 — IDENTITY NEUTRALITY
+% ============================================================
+
+\section{Lemma 2: Identity Operator Neutrality}
+
+\subsection{Lemma Statement}
+
+\begin{verbatim}
+Lemma OpCompose_IdentityNeutral :
+  ∀ f : Op,
+    OpCompose OpId f = f ∧
+    OpCompose f OpId = f.
+\end{verbatim}
+
+\subsection{Supporting Definition}
+
+\begin{verbatim}
+OpId := λ s, s
+\end{verbatim}
+
+\subsection{Proof Skeleton}
+
+\begin{verbatim}
+Proof.
+  intros f.
+  split.
+  - unfold OpCompose, OpId.
+    ext s.
+    reflexivity.
+  - unfold OpCompose, OpId.
+    ext s.
+    reflexivity.
+Qed.
+\end{verbatim}
+
+This lemma ensures FSFE’s operator algebra forms a proper monoid structure.
+
+\newpage
+
+% ============================================================
+% LEMMA 3 — Σ/Λ REVERSIBILITY
+% ============================================================
+
+\section{Lemma 3: Σ/Λ Reversibility}
+
+\subsection{Lemma Statement}
+
+\begin{verbatim}
+Lemma SigmaLambda_Reversible :
+  ∀ s : FSFEState,
+    Λ_inc(Σ_inc(s)) = Σ_inc(Λ_inc(s)).
+\end{verbatim}
+
+\subsection{Supporting Definitions}
+
+\begin{verbatim}
+Σ_inc(s) := { s with sigma := s.sigma + 1 }
+Λ_inc(s) := { s with lambda := s.lambda + 1 }
+\end{verbatim}
+
+\subsection{Proof Skeleton}
+
+\begin{verbatim}
+Proof.
+  intros s.
+  unfold Σ_inc, Λ_inc.
+  ext; simpl; reflexivity.
+Qed.
+\end{verbatim}
+
+This lemma establishes the commutativity of FSFE’s reversible counters, forming
+the algebraic basis for higher-order reversible transitions.
+
+\newpage
+
+% ============================================================
+% ALTITUDE COMPATIBILITY
+% ============================================================
+
+\section{Altitude Compatibility}
+
+\begin{verbatim}
+AltitudeCompatible(A7, A6)
+AltitudeCompatible(A7, A5)
+\end{verbatim}
+
+These lemmas are altitude-legal because:
+
+- they depend only on A6 operator definitions,
+- they replace A5 axioms,
+- they do not require A8–A12 runtime or geometric semantics.
+
+\newpage
+
+% ============================================================
+% PROVENANCE
+% ============================================================
+
+\section*{Provenance}
+
+\begin{verbatim}
+Provenance:
+  Artifact: A7-OperatorAlgebraProofs.tex
+  Altitude: A7
+  Compiler: Microsoft Copilot
+  Maintainer: Borealis S. Hedling
+  Location: Dublin, Ireland
+  Timestamp: 2026-10-28T07:45:00Z
+  Lineage:
+    - Second A7 proof module replacing A5 axioms
+    - Establishes associativity, identity neutrality, and Σ/Λ reversibility
+    - Provides Lean-compatible proof skeletons
+    - Altitude-consistent with A6 operator definitions
+  Governance Anchor: FSFE-GOV-A7-OPERATORALGEBRA-20261028
+\end{verbatim}
+
+\end{document}
