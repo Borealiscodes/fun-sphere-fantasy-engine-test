@@ -1,0 +1,145 @@
+% ============================================================
+% Inventory Tensor — FSFE Runtime Physics
+% Author: Borealis S. Hedling
+% ============================================================
+
+\section*{Inventory State Space}
+
+\[
+\mathcal{I}_{inv} = \mathbb{Z}^m
+\]
+
+\[
+I = \sum_{i=1}^{m} n_i e_i
+\]
+
+Where:
+
+- \(e_i\) = basis vector for item type \(i\)  
+- \(n_i \in \mathbb{Z}\) = item count  
+
+% ------------------------------------------------------------
+% ITEM MODIFIER MAP
+% ------------------------------------------------------------
+
+\section*{Item Modifier Map}
+
+Each item \(e_i\) contributes a stat modifier:
+
+\[
+\delta(e_i) : \mathcal{P} \to \Delta\mathcal{P}
+\]
+
+Total modifier:
+
+\[
+\Delta\mathcal{P}_{inv}
+= \sum_{i=1}^{m} n_i \cdot \delta(e_i)
+\]
+
+% ------------------------------------------------------------
+% INVENTORY ADD OPERATOR
+% ------------------------------------------------------------
+
+\section*{Add Item Operator}
+
+\[
+O_{\text{add}(i)}(I)
+= I + e_i
+\]
+
+Inverse:
+
+\[
+O_{\text{add}(i)}^{-1}
+= O_{\text{remove}(i)}
+\]
+
+% ------------------------------------------------------------
+% INVENTORY REMOVE OPERATOR
+% ------------------------------------------------------------
+
+\section*{Remove Item Operator}
+
+\[
+O_{\text{remove}(i)}(I)
+= I - e_i
+\]
+
+Inverse:
+
+\[
+O_{\text{remove}(i)}^{-1}
+= O_{\text{add}(i)}
+\]
+
+% ------------------------------------------------------------
+% GOVERNANCE
+% ------------------------------------------------------------
+
+\section*{Governance Constraint}
+
+\[
+G(I) = I
+\quad \text{iff } n_i \ge 0
+\]
+
+Otherwise:
+
+\[
+G(I) = \Pi(I)
+\]
+
+Where \(\Pi\) is ternary collapse.
+
+% ------------------------------------------------------------
+% INVENTORY → PLAYER COUPLING
+% ------------------------------------------------------------
+
+\section*{Inventory → Player Coupling}
+
+Player state update:
+
+\[
+\mathcal{P}' = \mathcal{P} + \Delta\mathcal{P}_{inv}
+\]
+
+Inverse:
+
+\[
+\mathcal{P} = \mathcal{P}' - \Delta\mathcal{P}_{inv}
+\]
+
+% ------------------------------------------------------------
+% FULL INVENTORY OPERATOR
+% ------------------------------------------------------------
+
+\section*{Full Inventory Operator}
+
+\[
+O_{\text{inv}(i)}
+= O_{\text{add}(i)} \circ G
+\]
+
+Inverse:
+
+\[
+O_{\text{inv}(i)}^{-1}
+= G \circ O_{\text{remove}(i)}
+\]
+
+% ------------------------------------------------------------
+% STABILITY
+% ------------------------------------------------------------
+
+\section*{Inventory Stability}
+
+\[
+\|\mathcal{R}_{FS}(O_{\text{inv}})\| < \epsilon
+\]
+
+\[
+\|\mathcal{H}_{FS}(O_{\text{inv}})\| < \delta
+\]
+
+% ============================================================
