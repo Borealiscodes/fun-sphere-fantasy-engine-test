@@ -477,272 +477,6 @@ These layers provide the lift, curvature, and stability needed for operability.
 
 ---
 
-
-Appendix B — Diagram Set for 42D → 45D Lift Geometry
-
-Formal Diagrammatic Representation of Altitude Layers, Lift Operators, Collapse Maps, and Fun‑Sphere Physics Requirements
-
----
-
-B.0 Overview
-
-This appendix provides formal diagrams illustrating:
-
-1. The NDH altitude stack (42D → 45D).  
-2. The lift operators \(L_u\), \(C\), and \(G\).  
-3. The collapse behavior of ternary projection.  
-4. The holonomy‑preserving vs. holonomy‑destroying maps.  
-5. The Fun‑Sphere physics pipeline.  
-6. The failure modes when restricted to 42D + ternary projection.
-
-All diagrams are expressed in commutative‑diagram notation and described textually for accessibility.
-
----
-
-B.1 Altitude Stack Diagram (42D → 45D)
-
-Diagram B1 — NDH Altitude Layers
-
-`
-X{42}  --Lu-->  X{43}  --C-->  X{44}  --G-->  X_{45}
- |                    |              |              |
- | Interpretation     | Understanding| Coherence    | Governance
- | Layer              | Layer        | Layer        | Layer
-`
-
-Description
-
-- 42D Interpretation Layer: fixed‑point algebra, resonance fields, interpretive bundle.  
-- 43D Understanding Layer: semantic lift, meta‑interpretive curvature.  
-- 44D Coherence Layer: cross‑zone consistency, spectral ecology stability.  
-- 45D Governance Layer: narrative physics regulation, dimensional policy invariants.
-
-This is the core pipeline Fun‑Sphere requires.
-
----
-
-B.2 Lift Operator Diagram
-
-Diagram B2 — Lift Operator \(L_u\)
-
-`
-X{42}  --Lu-->  X_{43}
- |                 |
- | 42D resonance   | 43D semantic lift
- | fields          | curvature fields
-`
-
-Formal Property
-
-\[
-L_u(x) = \text{Lift}(x)
-\]
-
-\[
-Lu \notin \mathcal{O}(X{42})
-\]
-
-Thus 42D cannot self‑lift.
-
----
-
-B.3 Coherence Operator Diagram
-
-Diagram B3 — Coherence Operator \(C\)
-
-`
-X{43}  --C-->  X{44}
- |              |
- | semantic     | cross-zone
- | curvature    | coherence
-`
-
-Formal Property
-
-\[
-C(L_u(x)) = \text{Coherence}(x)
-\]
-
-42D cannot maintain multi‑zone coherence.
-
----
-
-B.4 Governance Operator Diagram
-
-Diagram B4 — Governance Operator \(G\)
-
-`
-X{44}  --G-->  X{45}
- |              |
- | zone         | narrative physics
- | consistency  | governance invariants
-`
-
-Formal Property
-
-\[
-G(C(L_u(x))) = \text{Govern}(x)
-\]
-
-42D cannot govern.
-
----
-
-B.5 Ternary Projection Collapse Diagram
-
-Diagram B5 — Ternary Projection Collapse
-
-`
-X{42}  --Π-->  V3  --C3-->  V3
- |               |             |
- | resonance     | ternary     | collapse
- | fields        | projection  | irreversibility
-`
-
-Formal Collapse Property
-
-\[
-C3(u \otimes3 v \otimes3 w) = C3(u)
-\]
-
-\[
-C_3^{-1} \text{ does not exist}
-\]
-
-Thus ternary projection cannot support reversible physics.
-
----
-
-B.6 Holonomy Collapse Diagram
-
-Diagram B6 — Holonomy Destruction Under Ternary Projection
-
-`
-X{42}  --Rθ-->  X_{42}
- |                 |
- | holonomy        | twist curvature
-
-X{42}  --Π-->  V3
- |               |
- | projection    | holonomy lost
-
-Π ∘ R_θ = Π
-`
-
-Formal Statement
-
-\[
-\Pi(\mathcal{R}_\theta(x)) = \Pi(x)
-\]
-
-Holonomy is destroyed.
-
-Fun‑Sphere zones cannot exist without holonomy.
-
----
-
-B.7 Fun‑Sphere Physics Pipeline Diagram
-
-Diagram B7 — Fun‑Sphere Physics Requirements
-
-`
-X{42}  --Lu-->  X{43}  --C-->  X{44}  --G-->  X_{45}
- |         |         |         |         |
- | interp  | lift    | coherence| govern | runtime physics
-`
-
-Fun‑Sphere Operators
-
-- Zone holonomy: \(\mathcal{Z}_{rev}\)  
-- Spectral ecology: \(\mathcal{E}_{spec}\)  
-- Narrative curvature: \(\mathcal{N}\)  
-- Zone fusion: \(\mathcal{F}_{zone}\)  
-- Reversible operators: \(\mathcal{O}_{rev}\)
-
-None of these can be expressed in 42D.
-
----
-
-B.8 Failure Mode Diagram (42D + Ternary Projection)
-
-Diagram B8 — Failure of Fun‑Sphere Physics Under 42D + Ternary Projection
-
-`
-X{42}  --Π-->  V3  --C3-->  V3
- |               |             |
- | resonance     | projection  | collapse
- | fields        | only        | only
-
-NO L_u
-NO C
-NO G
-NO holonomy
-NO reversibility
-NO narrative manifold
-NO zone physics
-`
-
-Formal Contradiction
-
-Assume Fun‑Sphere physics exists in 42D:
-
-\[
-\mathcal{Z}{rev} : Zi \leftrightarrow Z_j
-\]
-
-Under ternary collapse:
-
-\[
-C3(\Pi(Zi)) = C3(\Pi(Zj))
-\]
-
-Thus:
-
-\[
-Zi = Zj
-\]
-
-Contradiction.
-
----
-
-B.9 Summary Diagram
-
-Diagram B9 — Complete NDH Altitude Stack vs. Ternary Projection
-
-`
-NDH Altitude Stack:
-X{42} → X{43} → X{44} → X{45}
-
-Ternary Projection:
-X{42} → V3 → V_3 (collapsed)
-
-Fun‑Sphere Physics:
-Requires X{43}, X{44}, X_{45}
-`
-
----
-
-B.10 Conclusion
-
-These diagrams formally demonstrate:
-
-- Ternary projection is a visualization tool, not a physics engine.  
-- 42D interpretation algebra is stable, but insufficient.  
-- Fun‑Sphere physics requires 43D–45D altitude layers.  
-- Holonomy, reversibility, narrative curvature, and zone physics cannot be expressed in 42D.  
-- Ternary projection destroys the structures Fun‑Sphere needs.
-
-Appendix B completes the mathematical and diagrammatic foundation for the preprint.
-
----
-
-Got you — you want to keep ALL the original Appendix B text exactly as‑is, but wrap ONLY the diagram blocks in <pre> so they don’t collapse, while leaving the rest of the prose untouched.
-
-Here is Appendix B exactly as you wrote it, with only the diagram blocks converted to <pre>.
-
----
-
 Appendix B — Diagram Set for 42D → 45D Lift Geometry
 
 Formal Diagrammatic Representation of Altitude Layers, Lift Operators, Collapse Maps, and Fun‑Sphere Physics Requirements
@@ -999,6 +733,395 @@ These diagrams formally demonstrate:
 - Ternary projection destroys the structures Fun‑Sphere needs.
 
 Appendix B completes the mathematical and diagrammatic foundation for the preprint.
+
+---
+
+Appendix C — Formal Operator Tables
+
+Fun‑Sphere Fantasy Engine — Preprint Figures
+
+Location: fun-sphere-fantasy-engine/preprints/figures/
+
+Author: Borealis S. Hedling — October 2026
+
+---
+
+C.0 Overview
+
+Appendix C provides formal operator tables for all NDH and Fun‑Sphere operators referenced in Appendices A and B. These tables define:
+
+- operator domains and codomains  
+- altitude layer membership  
+- reversibility  
+- holonomy behavior  
+- collapse behavior under ternary projection  
+- Fun‑Sphere physics relevance  
+
+This appendix is intended as a quick‑reference mathematical index for the preprint.
+
+---
+
+C.1 NDH Altitude Operators
+
+C.1.1 Altitude Lift Pipeline
+
+| Operator | Domain | Codomain | Altitude | Description |
+|---------|--------|----------|----------|-------------|
+| Lu | \(X{42}\) | \(X_{43}\) | 43D | Understanding lift operator; introduces semantic curvature |
+| C | \(X{43}\) | \(X{44}\) | 44D | Coherence operator; enforces cross‑zone consistency |
+| G | \(X{44}\) | \(X{45}\) | 45D | Governance operator; regulates narrative physics |
+
+---
+
+C.2 NDH Interpretation Algebra Operators (42D)
+
+| Operator | Domain | Codomain | Properties | Notes |
+|---------|--------|----------|------------|-------|
+| Ip | \(X{42}\) | constant \(c\) | fixed‑point, collapse | stable but non‑expressive for FSFE |
+| rα | \(X{42}\) | tangent bundle | resonance field | used in NDH Simulation Suite |
+| Φα | \(X{42} × t\) | \(X_{42}\) | resonance flow | visualized via ternary projection |
+
+---
+
+C.3 Ternary Projection Operators
+
+| Operator | Domain | Codomain | Behavior | Notes |
+|---------|--------|----------|----------|-------|
+| Π | \(X{42}\) | \(V3\) | ternary‑compatible projection | destroys altitude, holonomy |
+| C3 | \(V3\) | \(V_3\) | irreversible collapse | cannot support reversible physics |
+
+Collapse Identity
+
+`
+C3(u ⊗3 v ⊗3 w) = C3(u)
+`
+
+Holonomy Destruction
+
+`
+Π ∘ Rθ = Π
+`
+
+---
+
+C.4 Holonomy Operators
+
+| Operator | Domain | Codomain | Behavior | Notes |
+|---------|--------|----------|----------|-------|
+| Rθ | \(X{42}\) | \(X_{42}\) | twist curvature | essential for zone physics |
+| H_x | tangent bundle | tangent bundle | holonomy generator | used in NDH curvature algebra |
+
+Projection Failure
+
+Holonomy cannot survive ternary projection:
+
+`
+Π(Rθ(x)) = Π(x)
+`
+
+---
+
+C.5 Fun‑Sphere Physics Operators
+
+C.5.1 Zone Operators
+
+| Operator | Domain | Codomain | Reversible | Notes |
+|---------|--------|----------|------------|-------|
+| Zrev | \(Zi\) | \(Z_j\) | Yes | reversible zone transitions |
+| F_zone | zones | fused zone | Yes | zone‑fusion operator |
+
+C.5.2 Spectral Ecology Operators
+
+| Operator | Domain | Codomain | Behavior |
+|---------|--------|----------|----------|
+| E_spec | ecology manifold | eigenfamily | spectral monster ecology |
+| λ_k | spectral family | scalar | eigenvalue of ecology operator |
+
+C.5.3 Narrative Physics Operators
+
+| Operator | Domain | Codomain | Behavior |
+|---------|--------|----------|----------|
+| N | \(X{43}\) | \(X{45}\) | narrative curvature |
+| O_rev | operator bundle | operator bundle | reversible operator suite |
+
+---
+
+C.6 Collapse Behavior Summary
+
+C.6.1 Operators Preserved Under Ternary Projection
+
+| Operator | Status |
+|---------|--------|
+| r_α | preserved (visualizable) |
+| Φ_α | preserved (visualizable) |
+| I_p | preserved (collapses everything) |
+
+C.6.2 Operators Destroyed Under Ternary Projection
+
+| Operator | Failure Mode |
+|---------|--------------|
+| R_θ | holonomy destroyed |
+| L_u | cannot be expressed |
+| C | cannot be expressed |
+| G | cannot be expressed |
+| Z_rev | reversibility lost |
+| N | narrative curvature lost |
+| E_spec | spectral ecology lost |
+
+---
+
+C.7 Altitude Requirements Summary
+
+| Feature | Requires | Cannot Exist In |
+|---------|----------|-----------------|
+| Holonomy | 43D+ | 42D, ternary |
+| Reversible physics | 43D+ | ternary collapse |
+| Narrative manifold | 45D | 42D |
+| Zone fusion | 44D+ | ternary |
+| Spectral ecology | 44D | ternary |
+| Governance invariants | 45D | 42D |
+
+---
+
+C.8 Conclusion
+
+Appendix C provides a complete operator‑level reference for NDH and Fun‑Sphere physics. These tables show clearly:
+
+- 42D operators are stable but non‑expressive  
+- ternary projection is diagnostic but destructive  
+- Fun‑Sphere physics requires 43D–45D altitude operators  
+- holonomy, reversibility, and narrative curvature cannot be represented in 42D  
+
+Appendix C completes the mathematical index for the preprint.
+
+---
+
+Appendix D — Spectral Ecology Eigenfamilies
+
+Fun‑Sphere Fantasy Engine — Preprint Figures
+
+Location: fun-sphere-fantasy-engine/preprints/figures/
+
+Author: Borealis S. Hedling — October 2026
+
+---
+
+D.0 Overview
+
+Appendix D formalizes the spectral ecology system used in Fun‑Sphere physics.  
+It defines:
+
+- spectral ecology operators  
+- eigenfamilies and eigenvalue structure  
+- resonance‑to‑ecology lift behavior  
+- altitude requirements (44D+)  
+- collapse behavior under ternary projection  
+- monster ecology stability conditions  
+
+This appendix provides the mathematical foundation for the spectral ecology diagrams in Appendix E.
+
+---
+
+D.1 Spectral Ecology Manifold
+
+The spectral ecology system is defined over the manifold:
+
+\[
+\mathcal{M}_{eco} = \{\, s \mid s \text{ is a spectral ecological state} \,\}
+\]
+
+Each ecological state contains:
+
+- spectral resonance signature  
+- holonomy‑derived behavioral curvature  
+- ecology‑zone binding  
+- reversible interaction operators  
+
+The manifold is 44D‑anchored, meaning:
+
+\[
+\mathcal{M}{eco} \subset X{44}
+\]
+
+This altitude requirement is essential for stability.
+
+---
+
+D.2 Spectral Ecology Operator \(E_{\text{spec}}\)
+
+The core operator is:
+
+\[
+E{\text{spec}} : \mathcal{M}{eco} \to \Lambda
+\]
+
+where:
+
+- \(\Lambda\) is the eigenfamily space  
+- each eigenfamily corresponds to a monster ecology mode  
+- eigenvalues encode ecological stability  
+
+Operator Table
+
+| Symbol | Meaning |
+|--------|---------|
+| \(E_{\text{spec}}\) | spectral ecology operator |
+| \(\Lambda\) | eigenfamily space |
+| \(\lambda_k\) | eigenvalue for mode \(k\) |
+| \(v_k\) | eigenvector (ecology mode) |
+| \(vk \in X{44}\) | altitude requirement |
+
+---
+
+D.3 Eigenfamily Definition
+
+Eigenfamilies are defined by:
+
+\[
+E{\text{spec}}(vk) = \lambdak vk
+\]
+
+Where:
+
+- \(v_k\) is the k‑th spectral ecology mode  
+- \(\lambda_k\) is the ecology stability scalar  
+
+Interpretation
+
+- High \(\lambda_k\) → stable monster ecology  
+- Low \(\lambda_k\) → unstable ecology, zone drift  
+- Negative \(\lambda_k\) → catastrophic instability (forbidden in FSFE)  
+
+---
+
+D.4 Ecology‑Resonance Lift
+
+Spectral ecology modes originate from NDH resonance fields:
+
+\[
+r\alpha \in \mathfrak{X}(X{42})
+\]
+
+but require altitude lift:
+
+\[
+Lu(r\alpha) \in X_{43}
+\]
+
+and coherence binding:
+
+\[
+C(Lu(r\alpha)) \in X_{44}
+\]
+
+Thus:
+
+\[
+vk = C(Lu(r_\alpha))
+\]
+
+Altitude Requirement
+
+Spectral ecology cannot exist in 42D:
+
+| Altitude | Ecology Possible? |
+|----------|-------------------|
+| 42D | ❌ impossible |
+| 43D | ⚠️ partial lift only |
+| 44D | ✅ full spectral ecology |
+| 45D | ⚠️ governed ecology |
+
+---
+
+D.5 Monster Ecology Physics
+
+Each eigenfamily corresponds to a monster ecology mode, defining:
+
+- movement curvature  
+- interaction holonomy  
+- zone‑binding behavior  
+- spectral resonance signature  
+- reversible ecology transitions  
+
+Monster Ecology Table
+
+| Mode | Description | Stability |
+|------|-------------|-----------|
+| \(v_0\) | baseline ecology | high |
+| \(v_1\) | spectral predator mode | medium |
+| \(v_2\) | spectral swarm mode | medium‑low |
+| \(v_3\) | holonomy‑drift mode | low |
+| \(v_4\) | forbidden catastrophic mode | negative eigenvalue |
+
+---
+
+D.6 Collapse Behavior Under Ternary Projection
+
+Ternary projection destroys spectral ecology:
+
+\[
+\Pi(vk) = \Pi(C(Lu(r\alpha))) = \Pi(r\alpha)
+\]
+
+Thus:
+
+- altitude is lost  
+- coherence is lost  
+- eigenfamilies collapse  
+- monster ecology becomes undefined  
+
+Collapse Table
+
+| Feature | Survives Ternary? |
+|---------|-------------------|
+| resonance fields | ✔ yes |
+| spectral ecology | ❌ no |
+| eigenfamilies | ❌ no |
+| holonomy | ❌ no |
+| ecology stability | ❌ no |
+
+---
+
+D.7 Stability Conditions
+
+Spectral ecology stability requires:
+
+\[
+\lambda_k > 0
+\]
+
+and:
+
+\[
+vk \in X{44}
+\]
+
+and:
+
+\[
+G(vk) \in X{45}
+\]
+
+Thus:
+
+- 44D is required for coherence  
+- 45D is required for governance  
+
+42D cannot satisfy stability conditions.
+
+---
+
+D.8 Summary
+
+Appendix D establishes:
+
+- spectral ecology is a 44D phenomenon  
+- eigenfamilies encode monster ecology physics  
+- ternary projection collapses all spectral ecology  
+- Fun‑Sphere stability requires positive eigenvalues  
+- NDH resonance fields must be lifted and cohered before ecology emerges  
+
+This appendix provides the mathematical foundation for Appendix E (Zone Holonomy Maps).
 
 ---
 
