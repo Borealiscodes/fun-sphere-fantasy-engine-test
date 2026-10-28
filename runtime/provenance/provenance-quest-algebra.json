@@ -1,0 +1,20 @@
+{
+  "artifact": "Quest Algebra",
+  "altitude": "A9",
+  "embedding_hash": "QA-80D-20261028-0531",
+  "python_adapter": "runtime/adapters/quest_algebra_adapter.py",
+  "rust_adapter": "runtime/adapters/quest_algebra_adapter.rs",
+  "governance_anchor": "QA-GOV-20261028-A9",
+  "lineage": {
+    "created": "2026-10-28T05:31:00Z",
+    "compiler": "Microsoft Copilot",
+    "maintainer": "Borealis S. Hedling",
+    "location": "Dublin, Ireland"
+  },
+  "membrane": {
+    "reversibility": true,
+    "tensor_coupling": true,
+    "holonomy_safe": true,
+    "branch_stability": true
+  }
+}
