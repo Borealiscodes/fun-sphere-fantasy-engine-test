@@ -1,0 +1,201 @@
+% ============================================================
+% Runtime Tensor Atlas — Formal Tensor Definitions
+% Fun-Sphere Fantasy Engine
+% Author: Borealis S. Hedling
+% ============================================================
+
+\section*{Runtime Metric Tensor}
+
+\[
+g_{FS} : X_{45} \times X_{45} \to \mathbb{R}
+\]
+
+% ------------------------------------------------------------
+
+\section*{Runtime Connection Tensor}
+
+\[
+\nabla_{FS} = G \circ C \circ L_u
+\]
+
+\[
+(\nabla_{FS})_X Y
+= G(C(L_u(\nabla^{42}_X Y)))
+\]
+
+% ------------------------------------------------------------
+
+\section*{Runtime Curvature Tensor}
+
+\[
+\mathcal{R}_{FS}(X,Y)Z
+= \nabla_X \nabla_Y Z
+- \nabla_Y \nabla_X Z
+- \nabla_{[X,Y]} Z
+\]
+
+\[
+\mathcal{R}_{FS}
+= G(C(L_u(\mathcal{R}_{42})))
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governed Holonomy Tensor}
+
+\[
+\mathcal{H}_{FS}
+= \mathrm{Hol}(\nabla_{FS})
+\]
+
+\[
+\mathcal{H}_{FS}(x)
+= \exp\left( \oint_{\gamma_x} \nabla_{FS} \right)
+\]
+
+% ------------------------------------------------------------
+
+\section*{Narrative Curvature Tensor}
+
+\[
+\mathcal{N}(x)
+= G(C(L_u(x)))
+\]
+
+\[
+\mathcal{N}[x]
+= \int_{\gamma}
+g_{FS}(\mathcal{R}_{FS}(\dot{\gamma},\gamma), \gamma)\, dt
+\]
+
+% ------------------------------------------------------------
+
+\section*{Zone Holonomy Tensor}
+
+\[
+H_Z : Z_i \to TZ_i
+\]
+
+\[
+H_Z(x)
+= \exp(\theta\, \mathcal{R}_{FS}(x))
+\]
+
+% ------------------------------------------------------------
+
+\section*{Spectral Ecology Tensor}
+
+\[
+E_{spec} : X_{44} \to \Lambda
+\]
+
+\[
+E_{spec}(v_k)
+= \lambda_k v_k
+\]
+
+\[
+v_k = C(L_u(r_\alpha))
+\]
+
+% ------------------------------------------------------------
+
+\section*{Zone-Ecology Interaction Tensor}
+
+\[
+\mathcal{I}_{ZE}(Z, v_k)
+= H_Z(Z)
++ \lambda_k Z
++ \nabla_{FS} Z
+\]
+
+\[
+\frac{\partial Z}{\partial t}
+= \mathcal{I}_{ZE}(Z, v_k)
+\]
+
+% ------------------------------------------------------------
+
+\section*{Fusion Tensor}
+
+\[
+\mathcal{F}_{zone}(Z_i, Z_j)
+= Z_{ij}
+\]
+
+\[
+\mathcal{F}_{abc}
+= g_{FS}(H_a, H_b)\, v_c
+\]
+
+% ------------------------------------------------------------
+
+\section*{Reversible Operator Tensor}
+
+\[
+\mathcal{G}_{rev}
+= \{ O \in \mathrm{Diff}(X_{45}) \mid O^{-1} \text{ exists} \}
+\]
+
+\[
+\mathfrak{g}_{rev}
+= \{ X \mid \exp(tX) \in \mathcal{G}_{rev} \}
+\]
+
+\[
+[X,Y] = XY - YX
+\]
+
+\[
+[G,X] = 0,\quad [C,X] = 0,\quad [L_u,X] = 0
+\]
+
+% ------------------------------------------------------------
+
+\section*{Stability Tensors}
+
+\[
+\lambda_k > 0
+\]
+
+\[
+\|H_Z\| < \epsilon
+\]
+
+\[
+\|G(Z)\| < \delta
+\]
+
+\[
+\|C(Z_i) - C(Z_j)\| = 0
+\]
+
+\[
+\mathcal{N}[x] < K
+\]
+
+% ------------------------------------------------------------
+
+\section*{Collapse Tensors}
+
+\[
+\Pi(\mathcal{R}_{FS}) = 0
+\]
+
+\[
+\Pi(\mathcal{N}) = 0
+\]
+
+\[
+\Pi(\mathcal{G}_{rev}) = \emptyset
+\]
+
+\[
+\Pi(\mathcal{I}_{ZE}) = \Pi(Z)
+\]
+
+\[
+\Pi(G(C(L_u(x)))) = \Pi(x)
+\]
+
+% ============================================================
