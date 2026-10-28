@@ -4,7 +4,7 @@ import FSFE.Core.Types
 namespace FSFE
 
 open HallucinationGuard
-
+ 
 /-
   A5 Formal Verification Layer: Core Predicates
   ---------------------------------------------
