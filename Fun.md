@@ -1125,3 +1125,508 @@ This appendix provides the mathematical foundation for Appendix E (Zone Holonomy
 
 ---
 
+Appendix E — Zone Holonomy Maps
+
+Fun‑Sphere Fantasy Engine — Preprint Figures
+
+Location: fun-sphere-fantasy-engine/preprints/figures/
+
+Author: Borealis S. Hedling — October 2026
+
+---
+
+E.0 Overview
+
+Appendix E formalizes the zone holonomy system used in Fun‑Sphere physics.  
+It defines:
+
+- zone manifolds  
+- holonomy curvature maps  
+- reversible zone transitions  
+- zone‑fusion geometry  
+- altitude requirements (43D–45D)  
+- collapse behavior under ternary projection  
+
+Zone holonomy is the geometric backbone of Fun‑Sphere runtime physics.
+
+---
+
+E.1 Zone Manifold Definition
+
+Fun‑Sphere zones form a structured manifold:
+
+\[
+\mathcal{Z} = \{ Zi \mid i \in \mathbb{N},\; Zi \text{ is a Fun-Sphere zone} \}
+\]
+
+Each zone contains:
+
+- local curvature  
+- narrative‑physics state  
+- spectral ecology bindings  
+- reversible transition operators  
+
+Zones exist at 43D+, meaning:
+
+\[
+\mathcal{Z} \subset X_{43}
+\]
+
+---
+
+E.2 Holonomy Map \(H_Z\)
+
+Each zone has a holonomy map:
+
+\[
+HZ : Zi \to Z_i
+\]
+
+encoding:
+
+- twist curvature  
+- narrative‑state rotation  
+- ecology‑binding deformation  
+- reversible zone physics  
+
+Holonomy Properties
+
+| Property | Meaning |
+|----------|---------|
+| curvature‑preserving | maintains zone geometry |
+| reversible | supports bidirectional transitions |
+| altitude‑dependent | requires 43D+ |
+| collapse‑sensitive | destroyed by ternary projection |
+
+---
+
+E.3 Zone Transition Operator \(\mathcal{Z}_{rev}\)
+
+Zones transition via:
+
+\[
+\mathcal{Z}{rev} : Zi \leftrightarrow Z_j
+\]
+
+This operator is:
+
+- reversible  
+- holonomy‑preserving  
+- coherence‑dependent  
+- governance‑regulated  
+
+Transition Table
+
+| Feature | Requirement |
+|---------|-------------|
+| reversibility | holonomy intact |
+| stability | positive spectral eigenvalues |
+| coherence | 44D operator \(C\) |
+| governance | 45D operator \(G\) |
+
+---
+
+E.4 Zone‑Fusion Operator \(\mathcal{F}_{zone}\)
+
+Zone fusion combines two zones:
+
+\[
+\mathcal{F}{zone}(Zi, Zj) = Z{ij}
+\]
+
+Fusion requires:
+
+- shared holonomy curvature  
+- compatible spectral ecology modes  
+- governance invariants  
+
+Fusion Behavior
+
+| Input | Output |
+|--------|--------|
+| two coherent zones | fused stable zone |
+| incompatible zones | unstable or forbidden fusion |
+| collapsed zones | fusion impossible |
+
+---
+
+E.5 Holonomy Curvature Tensor
+
+Zone holonomy curvature is expressed via:
+
+\[
+\mathcal{R}Z(x) = \exp(\theta HZ)
+\]
+
+where:
+
+- \(H_Z\) is the zone holonomy generator  
+- \(\theta\) is the curvature parameter  
+
+Interpretation
+
+- small \(\theta\): stable narrative curvature  
+- large \(\theta\): chaotic narrative curvature  
+- negative \(\theta\): forbidden (catastrophic instability)  
+
+---
+
+E.6 Altitude Requirements
+
+Zone holonomy requires:
+
+| Altitude | Capability |
+|----------|------------|
+| 42D | ❌ no zones, no holonomy |
+| 43D | ✔ zone geometry |
+| 44D | ✔ coherence across zones |
+| 45D | ✔ governance of zone transitions |
+
+Thus:
+
+\[
+HZ \notin \mathcal{O}(X{42})
+\]
+
+---
+
+E.7 Collapse Behavior Under Ternary Projection
+
+Ternary projection destroys zone holonomy:
+
+\[
+\Pi(H_Z(x)) = \Pi(x)
+\]
+
+Thus:
+
+- holonomy lost  
+- zone curvature lost  
+- reversible transitions lost  
+- zone fusion impossible  
+- narrative manifold collapses  
+
+Collapse Table
+
+| Feature | Survives Ternary? |
+|---------|-------------------|
+| zone geometry | ❌ no |
+| holonomy | ❌ no |
+| reversible transitions | ❌ no |
+| zone fusion | ❌ no |
+| narrative curvature | ❌ no |
+
+---
+
+E.8 Zone Holonomy Stability Conditions
+
+Zone holonomy stability requires:
+
+\[
+H_Z \text{ is curvature-preserving}
+\]
+
+and:
+
+\[
+\mathcal{Z}_{rev} \text{ is reversible}
+\]
+
+and:
+
+\[
+C(HZ) \in X{44}
+\]
+
+and:
+
+\[
+G(HZ) \in X{45}
+\]
+
+Thus:
+
+- 43D provides geometry  
+- 44D provides coherence  
+- 45D provides governance  
+
+42D cannot support zone holonomy.
+
+---
+
+E.9 Summary
+
+Appendix E establishes:
+
+- zone holonomy is a 43D–45D phenomenon  
+- reversible zone transitions require intact holonomy  
+- zone fusion depends on spectral ecology compatibility  
+- ternary projection collapses all zone physics  
+- Fun‑Sphere runtime stability requires altitude lift  
+
+This appendix provides the geometric foundation for Appendix F (Runtime Physics).
+
+---
+
+Appendix F — Fun‑Sphere Runtime Physics (Full Mathematical Formalization)
+
+Fun‑Sphere Fantasy Engine — Preprint Figures
+
+Author: Borealis S. Hedling — October 2026
+
+---
+
+F.0 Runtime Manifold Structure
+
+Fun‑Sphere runtime physics operates on the governed manifold:
+
+\[
+\mathcal{R}{FS} = (X{45}, g{FS}, \nabla{FS}, \mathcal{H}_{FS})
+\]
+
+where:
+
+- \(g_{FS}\) — runtime metric  
+- \(\nabla_{FS}\) — runtime connection  
+- \(\mathcal{H}_{FS}\) — holonomy group  
+
+The runtime connection is defined by:
+
+\[
+\nabla{FS} = G \circ C \circ Lu
+\]
+
+and the holonomy group is:
+
+\[
+\mathcal{H}{FS} = \mathrm{Hol}(\nabla{FS})
+\]
+
+This is the governed holonomy, not the 42D twist‑holonomy.
+
+---
+
+F.1 Runtime Curvature Tensor
+
+Runtime curvature is:
+
+\[
+\mathcal{R}{FS}(X,Y)Z = \nablaX \nablaY Z - \nablaY \nablaX Z - \nabla{[X,Y]} Z
+\]
+
+Substituting the altitude pipeline:
+
+\[
+\nabla = G(C(L_u(\cdot)))
+\]
+
+Thus:
+
+\[
+\mathcal{R}{FS} = G(C(Lu(\mathcal{R}_{42})))
+\]
+
+This is the lifted curvature, not the 42D curvature.
+
+---
+
+F.2 Narrative Curvature Functional
+
+Define the narrative curvature functional:
+
+\[
+\mathcal{N}[x] = \int{\gamma} g{FS}(\mathcal{R}_{FS}(\dot{\gamma},\gamma), \gamma)\, dt
+\]
+
+where:
+
+- \(\gamma\) is a narrative trajectory  
+- \(\dot{\gamma}\) is its tangent vector  
+
+This functional determines:
+
+- narrative drift  
+- curvature‑induced transitions  
+- zone‑ecology coupling  
+
+---
+
+F.3 Reversible Operator Group
+
+Runtime reversible operators form a Lie group:
+
+\[
+\mathcal{G}{rev} = \{ O \mid O^{-1} \text{ exists},\; O \in \mathrm{Diff}(X{45}) \}
+\]
+
+with Lie algebra:
+
+\[
+\mathfrak{g}{rev} = \{ X \mid \exp(tX) \in \mathcal{G}{rev} \}
+\]
+
+Commutator:
+
+\[
+[X,Y] = XY - YX
+\]
+
+Governance compatibility condition:
+
+\[
+[G,X] = 0
+\]
+
+Coherence compatibility:
+
+\[
+[C,X] = 0
+\]
+
+Understanding compatibility:
+
+\[
+[L_u,X] = 0
+\]
+
+Thus reversible operators must commute with the entire altitude pipeline.
+
+---
+
+F.4 Zone–Ecology Interaction PDE
+
+Zone‑ecology interaction is governed by:
+
+\[
+\frac{\partial Z}{\partial t} = \mathcal{I}{ZE}(Z, vk)
+\]
+
+with:
+
+\[
+\mathcal{I}{ZE}(Z, vk) = HZ(Z) + \lambdak Z + \nabla_{FS} Z
+\]
+
+Breaking it down:
+
+- \(H_Z(Z)\) — holonomy curvature term  
+- \(\lambda_k Z\) — spectral ecology stability term  
+- \(\nabla_{FS} Z\) — governed connection term  
+
+This is a governed PDE, not a 42D resonance flow.
+
+---
+
+F.5 Zone Fusion Tensor
+
+Zone fusion is defined by:
+
+\[
+Z{ij} = \mathcal{F}{zone}(Zi, Zj)
+\]
+
+with fusion tensor:
+
+\[
+\mathcal{F}{abc} = g{FS}(Ha, Hb) v_c
+\]
+
+Fusion stability condition:
+
+\[
+\lambda_c > 0
+\]
+
+Fusion coherence condition:
+
+\[
+C(Zi) = C(Zj)
+\]
+
+Fusion governance condition:
+
+\[
+G(Zi) = G(Zj)
+\]
+
+---
+
+F.6 Runtime Stability Inequalities
+
+Runtime stability requires:
+
+Spectral Stability
+\[
+\lambda_k > 0
+\]
+
+Holonomy Stability
+\[
+\|H_Z\| < \epsilon
+\]
+
+Governance Stability
+\[
+\|G(Z)\| < \delta
+\]
+
+Coherence Stability
+\[
+\|C(Zi) - C(Zj)\| = 0
+\]
+
+Narrative Curvature Stability
+\[
+\mathcal{N}[x] < K
+\]
+
+These inequalities define the stable runtime region.
+
+---
+
+F.7 Collapse Under Ternary Projection
+
+Ternary projection destroys runtime physics:
+
+\[
+\Pi(\mathcal{R}_{FS}) = 0
+\]
+
+\[
+\Pi(\mathcal{N}) = 0
+\]
+
+\[
+\Pi(\mathcal{G}_{rev}) = \emptyset
+\]
+
+\[
+\Pi(\mathcal{I}_{ZE}) = \Pi(Z)
+\]
+
+Thus:
+
+- curvature collapses  
+- holonomy collapses  
+- reversibility collapses  
+- PDE degenerates  
+- runtime manifold collapses  
+
+---
+
+F.8 Summary
+
+Appendix F now contains:
+
+- full curvature tensor  
+- narrative curvature functional  
+- reversible operator Lie group  
+- zone‑ecology PDE  
+- fusion tensor  
+- stability inequalities  
+- collapse equations  
+
+This is the mathematically complete runtime physics appendix.
+
+---
+
