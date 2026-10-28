@@ -1,0 +1,215 @@
+% ============================================================
+% FSFE Operator Algebra — Group, Algebra, Commutators
+% Fun-Sphere Fantasy Engine
+% Author: Borealis S. Hedling
+% ============================================================
+
+\section*{Reversible Operator Group}
+
+\[
+\mathcal{G}_{rev}
+= \{ O \in \mathrm{Diff}(X_{45}) \mid O^{-1} \text{ exists} \}
+\]
+
+\[
+O^{-1} \circ O = \mathrm{id},\qquad
+O \circ O^{-1} = \mathrm{id}
+\]
+
+% ------------------------------------------------------------
+
+\section*{Lie Algebra of Reversible Operators}
+
+\[
+\mathfrak{g}_{rev}
+= \{ X \mid \exp(tX) \in \mathcal{G}_{rev} \}
+\]
+
+\[
+\exp(tX)
+= \sum_{n=0}^{\infty} \frac{t^n}{n!} X^n
+\]
+
+% ------------------------------------------------------------
+
+\section*{Lie Bracket}
+
+\[
+[X,Y] = XY - YX
+\]
+
+\[
+[X,[Y,Z]] + [Y,[Z,X]] + [Z,[X,Y]] = 0
+\]
+
+(Jacobi identity)
+
+% ------------------------------------------------------------
+
+\section*{Altitude Compatibility}
+
+\[
+[L_u, X] = 0
+\]
+
+\[
+[C, X] = 0
+\]
+
+\[
+[G, X] = 0
+\]
+
+% ------------------------------------------------------------
+
+\section*{Governance Compatibility}
+
+\[
+[G, O] = GO - OG = 0
+\]
+
+\[
+[G, \exp(tX)] = 0
+\]
+
+\[
+[G, \mathfrak{g}_{rev}] = 0
+\]
+
+% ------------------------------------------------------------
+
+\section*{Coherence Compatibility}
+
+\[
+[C, O] = 0
+\]
+
+\[
+[C, X] = 0
+\]
+
+% ------------------------------------------------------------
+
+\section*{Holonomy Compatibility}
+
+\[
+[H_Z, O] = 0
+\]
+
+\[
+[H_Z, X] = 0
+\]
+
+\[
+[H_Z, \exp(tX)] = 0
+\]
+
+% ------------------------------------------------------------
+
+\section*{Spectral Ecology Compatibility}
+
+\[
+[E_{spec}, O] = 0
+\]
+
+\[
+[E_{spec}, X] = 0
+\]
+
+\[
+[E_{spec}, \exp(tX)] = 0
+\]
+
+% ------------------------------------------------------------
+
+\section*{Operator Action on Zones}
+
+\[
+O : Z_i \to Z_j
+\]
+
+\[
+O(Z_i) = Z_j
+\]
+
+\[
+O^{-1}(Z_j) = Z_i
+\]
+
+% ------------------------------------------------------------
+
+\section*{Operator Action on Ecology Modes}
+
+\[
+O(v_k) = v_k
+\]
+
+\[
+[X, v_k] = 0
+\]
+
+\[
+[E_{spec}, O] = 0
+\]
+
+% ------------------------------------------------------------
+
+\section*{Operator Action on Curvature}
+
+\[
+O(\mathcal{R}_{FS}) = \mathcal{R}_{FS}
+\]
+
+\[
+[X, \mathcal{R}_{FS}] = 0
+\]
+
+% ------------------------------------------------------------
+
+\section*{Operator Action on Narrative Curvature}
+
+\[
+O(\mathcal{N}) = \mathcal{N}
+\]
+
+\[
+[X, \mathcal{N}] = 0
+\]
+
+% ------------------------------------------------------------
+
+\section*{Operator Action on Fusion Tensor}
+
+\[
+O(\mathcal{F}_{abc}) = \mathcal{F}_{abc}
+\]
+
+\[
+[X, \mathcal{F}_{abc}] = 0
+\]
+
+% ------------------------------------------------------------
+
+\section*{Operator Algebra Collapse Under Ternary Projection}
+
+\[
+\Pi(\mathcal{G}_{rev}) = \emptyset
+\]
+
+\[
+\Pi(\mathfrak{g}_{rev}) = 0
+\]
+
+\[
+\Pi([X,Y]) = 0
+\]
+
+\[
+\Pi(G) = \Pi(C) = \Pi(L_u)
+\]
+
+\[
+\Pi(O) = \Pi(\mathrm{id})
+\]
+
+% ============================================================
