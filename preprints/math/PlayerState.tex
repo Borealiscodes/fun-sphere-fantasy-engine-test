@@ -1,0 +1,193 @@
+% ============================================================
+% Player State Tensor — FSFE Runtime Physics
+% Author: Borealis S. Hedling
+% ============================================================
+
+\section*{Player State Tensor}
+
+\[
+\mathcal{P}(x)
+= (HP, AP, DF, SPD, ACC, EV, C_{\text{crit}}, M_{\text{crit}},
+R, CD, I, r, Z)
+\]
+
+Where:
+
+- \(HP\) = health  
+- \(AP\) = attack power  
+- \(DF\) = defense  
+- \(SPD\) = speed / initiative  
+- \(ACC\) = accuracy  
+- \(EV\) = evasion  
+- \(C_{\text{crit}}\) = crit chance  
+- \(M_{\text{crit}}\) = crit multiplier  
+- \(R\) = resource pools  
+- \(CD\) = cooldown fields  
+- \(I\) = inventory tensor  
+- \(r\) = rasa tensor  
+- \(Z\) = zone tensor  
+
+% ------------------------------------------------------------
+% HEALTH
+% ------------------------------------------------------------
+
+\section*{Health}
+
+\[
+HP_{\max}(L) = HP_0 + g_{HP} L
+\]
+
+\[
+HP \in \mathbb{R}_{\ge 0}
+\]
+
+% ------------------------------------------------------------
+% CORE STATS
+% ------------------------------------------------------------
+
+\section*{Core Stats}
+
+\[
+AP(L) = AP_0 + g_{AP} L
+\]
+
+\[
+DF(L) = DF_0 + g_{DF} L
+\]
+
+\[
+SPD = SPD_0 + \Delta SPD
+\]
+
+\[
+ACC, EV \in [0,1]
+\]
+
+\[
+C_{\text{crit}} \in [0,1],\quad
+M_{\text{crit}} \ge 1
+\]
+
+% ------------------------------------------------------------
+% ABILITY FIELDS
+% ------------------------------------------------------------
+
+\section*{Ability Fields}
+
+\[
+R = (R_1, R_2, \ldots, R_m)
+\]
+
+\[
+CD = (CD_1, CD_2, \ldots, CD_n)
+\]
+
+Resource update:
+
+\[
+R_i' = R_i - cost_i(a)
+\]
+
+Cooldown update:
+
+\[
+CD_j' = CD_j + \Delta CD(a)
+\]
+
+% ------------------------------------------------------------
+% INVENTORY COUPLING
+% ------------------------------------------------------------
+
+\section*{Inventory Coupling}
+
+\[
+I = \sum_{i=1}^{m} n_i e_i
+\]
+
+Item modifiers:
+
+\[
+\Delta \mathcal{P}
+= \sum_{i=1}^{m} n_i \cdot \delta(e_i)
+\]
+
+Governed inventory:
+
+\[
+G(I) = I \quad \text{iff } n_i \ge 0
+\]
+
+% ------------------------------------------------------------
+% RASA COUPLING
+% ------------------------------------------------------------
+
+\section*{Rasa Coupling}
+
+\[
+r \in \mathbb{C}^9
+\]
+
+\[
+r^{(43)} = L_u(r)
+\]
+
+\[
+v_k^{rasa} = C(r^{(43)})
+\]
+
+\[
+R^{(45)} = G(v_k^{rasa})
+\]
+
+Player emotional state contribution:
+
+\[
+\Delta \mathcal{P}_{rasa}
+= f(r, \mathcal{R}_{rasa}, \mathcal{C}_{rasa})
+\]
+
+% ------------------------------------------------------------
+% ZONE COUPLING
+% ------------------------------------------------------------
+
+\section*{Zone Coupling}
+
+\[
+Z \in X_{45}
+\]
+
+Zone influence on player:
+
+\[
+\Delta \mathcal{P}_{zone}
+= H_Z(Z) + \lambda_k Z + \nabla_{FS} Z
+\]
+
+Player influence on zone:
+
+\[
+\frac{\partial Z}{\partial t}
+= \mathcal{I}_{ZE}(Z, v_k) + \mathcal{I}_{ZR}(Z, r)
+\]
+
+% ------------------------------------------------------------
+% GOVERNED PLAYER STATE
+% ------------------------------------------------------------
+
+\section*{Governed Player State}
+
+\[
+\mathcal{P}^{(45)} = G(C(L_u(\mathcal{P}^{(42)})))
+\]
+
+Stability:
+
+\[
+\|\mathcal{R}_{FS}(\mathcal{P})\| < \epsilon
+\]
+
+\[
+\|\mathcal{H}_{FS}(\mathcal{P})\| < \delta
+\]
+
+% ============================================================
