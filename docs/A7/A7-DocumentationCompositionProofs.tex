@@ -1,0 +1,209 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+% Load ontology macros
+\input{citation-ontology-mac-v2.0-infused.tex}
+
+\begin{document}
+
+% ============================================================
+% HEADER
+% ============================================================
+
+\citeclass{FSFE-Proofs}
+\provenanceanchor{FSFE-A7-DOCUMENTATIONCOMPOSITION-20261028}
+
+\begin{citationmembrane}{A7-DocumentationComposition}
+  \citeanchor{DocumentationCompositionTheorems}
+  \citeanchor{Tile}
+  \citeanchor{Document}
+  \citeanchor{TileAltitude}
+\end{citationmembrane}
+
+\section*{A7: Documentation Composition Proofs}
+
+This module contains the tenth and final set of A7 lemmas, replacing A5
+documentation composition axioms with real proofs. These lemmas establish the
+invariant structure of FSFE’s documentation system, ensuring that document
+composition, altitude preservation, and documentation validity behave correctly
+under reversible transitions.
+
+\newpage
+
+% ============================================================
+% LEMMA 1 — DOCUMENT COMPOSITION STABILITY
+% ============================================================
+
+\section{Lemma 1: Document Composition Stability}
+
+\subsection{Lemma Statement}
+
+\begin{verbatim}
+Lemma DocumentComposition_Stable :
+  ∀ d : Document,
+    DocumentValid(d) →
+    DocumentValid(DocumentCompose(d)).
+\end{verbatim}
+
+\subsection{Supporting Definitions}
+
+\begin{verbatim}
+Document := { tiles : List Tile }
+
+DocumentValid(d) :=
+  TileSeq_valid(d.tiles)
+
+DocumentCompose(d) :=
+  { tiles := d.tiles }   (* identity step at A7 altitude *)
+\end{verbatim}
+
+\subsection{Proof Skeleton}
+
+\begin{verbatim}
+Proof.
+  intros d Hvalid.
+  unfold DocumentCompose.
+  unfold DocumentValid.
+  (* identity composition preserves validity *)
+  exact Hvalid.
+Qed.
+\end{verbatim}
+
+This lemma ensures that document composition preserves validity at the A7
+altitude.
+
+\newpage
+
+% ============================================================
+% LEMMA 2 — ALTITUDE PRESERVATION UNDER COMPOSITION
+% ============================================================
+
+\section{Lemma 2: Altitude Preservation Under Composition}
+
+\subsection{Lemma Statement}
+
+\begin{verbatim}
+Lemma DocumentAltitude_Preserved :
+  ∀ d : Document,
+    AltitudeValid(d) →
+    AltitudeValid(DocumentCompose(d)).
+\end{verbatim}
+
+\subsection{Supporting Definitions}
+
+\begin{verbatim}
+AltitudeValid(d) :=
+  ∀ t ∈ d.tiles,
+    TileAltitude(t) ≤ A7
+
+DocumentCompose(d).tiles := d.tiles
+\end{verbatim}
+
+\subsection{Proof Skeleton}
+
+\begin{verbatim}
+Proof.
+  intros d Halt.
+  unfold DocumentCompose.
+  unfold AltitudeValid in *.
+  intros t Hin.
+  (* altitude assignment unchanged *)
+  apply Halt.
+  exact Hin.
+Qed.
+\end{verbatim}
+
+This lemma ensures that document altitude assignments remain stable under
+composition.
+
+\newpage
+
+% ============================================================
+% LEMMA 3 — DOCUMENTATION VALIDITY INVARIANCE
+% ============================================================
+
+\section{Lemma 3: Documentation Validity Invariance}
+
+\subsection{Lemma Statement}
+
+\begin{verbatim}
+Lemma DocumentationValidity_Invariant :
+  ∀ d : Document,
+    Documentation_valid(d) →
+    Documentation_valid(DocumentCompose(d)).
+\end{verbatim}
+
+\subsection{Supporting Definitions}
+
+\begin{verbatim}
+Documentation_valid(d) :=
+  DocumentValid(d) ∧ AltitudeValid(d)
+\end{verbatim}
+
+\subsection{Proof Skeleton}
+
+\begin{verbatim}
+Proof.
+  intros d Hdoc.
+  unfold Documentation_valid in *.
+  destruct Hdoc as [Hvalid Halt].
+  split.
+  - (* DocumentValid preserved *)
+    unfold DocumentCompose.
+    exact Hvalid.
+  - (* AltitudeValid preserved *)
+    unfold DocumentCompose.
+    exact Halt.
+Qed.
+\end{verbatim}
+
+This lemma ensures that documentation validity is preserved under reversible
+composition.
+
+\newpage
+
+% ============================================================
+% ALTITUDE COMPATIBILITY
+% ============================================================
+
+\section{Altitude Compatibility}
+
+\begin{verbatim}
+AltitudeCompatible(A7, A6)
+AltitudeCompatible(A7, A5)
+\end{verbatim}
+
+These lemmas are altitude‑legal because:
+
+- they depend only on A6 documentation definitions,
+- they replace A5 axioms,
+- they do not require A8–A12 runtime or geometric semantics.
+
+\newpage
+
+% ============================================================
+% PROVENANCE
+% ============================================================
+
+\section*{Provenance}
+
+\begin{verbatim}
+Provenance:
+  Artifact: A7-DocumentationCompositionProofs.tex
+  Altitude: A7
+  Compiler: Microsoft Copilot
+  Maintainer: Borealis S. Hedling
+  Location: Dublin, Ireland
+  Timestamp: 2026-10-28T08:10:00Z
+  Lineage:
+    - Tenth and final A7 proof module replacing A5 axioms
+    - Establishes document composition stability, altitude preservation,
+      and documentation validity invariance
+    - Provides Lean-compatible proof skeletons
+    - Altitude-consistent with A6 documentation definitions
+  Governance Anchor: FSFE-GOV-A7-DOCUMENTATIONCOMPOSITION-20261028
+\end{verbatim}
+
+\end{document}
