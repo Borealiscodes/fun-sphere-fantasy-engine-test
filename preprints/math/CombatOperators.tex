@@ -1,0 +1,167 @@
+% ============================================================
+% Combat Operators — FSFE Runtime Physics
+% Author: Borealis S. Hedling
+% ============================================================
+
+\section*{Player State Reference}
+
+\[
+\mathcal{P}
+= (HP, AP, DF, SPD, ACC, EV, C_{\text{crit}}, M_{\text{crit}}, R, CD, I, r, Z)
+\]
+
+% ------------------------------------------------------------
+% HIT CHANCE OPERATOR
+% ------------------------------------------------------------
+
+\section*{Hit Chance}
+
+\[
+P_{\text{hit}}
+= \mathrm{clamp}\left(0.95 - 0.01(EV - ACC),\ 0.05,\ 0.95\right)
+\]
+
+Define hit operator:
+
+\[
+O_{\text{hit}}(\mathcal{P})
+= P_{\text{hit}}
+\]
+
+Reversibility:
+
+\[
+O_{\text{hit}}^{-1} = O_{\text{hit}}
+\]
+
+% ------------------------------------------------------------
+% BASE DAMAGE OPERATOR
+% ------------------------------------------------------------
+
+\section*{Base Damage}
+
+\[
+DMG_{\text{base}}
+= \max(AP - \alpha DF,\ DMG_{\min})
+\]
+
+Define:
+
+\[
+O_{\text{base}}(\mathcal{P})
+= DMG_{\text{base}}
+\]
+
+Reversibility:
+
+\[
+O_{\text{base}}^{-1} = O_{\text{base}}
+\]
+
+% ------------------------------------------------------------
+% CRIT OPERATOR
+% ------------------------------------------------------------
+
+\section*{Crit Operator}
+
+Crit event:
+
+\[
+\chi_{\text{crit}} =
+\begin{cases}
+1 & \text{with prob. } C_{\text{crit}} \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+Crit damage:
+
+\[
+DMG_{\text{crit}}
+= DMG_{\text{base}} \cdot
+\left(1 + \chi_{\text{crit}}(M_{\text{crit}} - 1)\right)
+\]
+
+Define:
+
+\[
+O_{\text{crit}}(\mathcal{P})
+= DMG_{\text{crit}}
+\]
+
+Reversibility:
+
+\[
+O_{\text{crit}}^{-1} = O_{\text{crit}}
+\]
+
+% ------------------------------------------------------------
+% DAMAGE APPLICATION OPERATOR
+% ------------------------------------------------------------
+
+\section*{Damage Application}
+
+\[
+HP' = HP - DMG_{\text{crit}}
+\]
+
+Define:
+
+\[
+O_{\text{dmg}}(\mathcal{P})
+= \mathcal{P} - DMG_{\text{crit}} \cdot e_{HP}
+\]
+
+Inverse:
+
+\[
+O_{\text{dmg}}^{-1}(\mathcal{P})
+= \mathcal{P} + DMG_{\text{crit}} \cdot e_{HP}
+\]
+
+% ------------------------------------------------------------
+% FULL COMBAT OPERATOR
+% ------------------------------------------------------------
+
+\section*{Full Combat Operator}
+
+\[
+O_{\text{combat}}
+= O_{\text{dmg}}
+\circ O_{\text{crit}}
+\circ O_{\text{base}}
+\circ O_{\text{hit}}
+\]
+
+Evaluation:
+
+\[
+O_{\text{combat}}(\mathcal{P})
+= \mathcal{P}'
+\]
+
+Inverse:
+
+\[
+O_{\text{combat}}^{-1}
+= O_{\text{hit}}^{-1}
+\circ O_{\text{base}}^{-1}
+\circ O_{\text{crit}}^{-1}
+\circ O_{\text{dmg}}^{-1}
+\]
+
+% ------------------------------------------------------------
+% STABILITY
+% ------------------------------------------------------------
+
+\section*{Combat Stability}
+
+\[
+\|\mathcal{R}_{FS}(O_{\text{combat}})\| < \epsilon
+\]
+
+\[
+\|\mathcal{H}_{FS}(O_{\text{combat}})\| < \delta
+\]
+
+% ============================================================
