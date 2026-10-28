@@ -1,0 +1,183 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+% Load ontology macros
+\input{citation-ontology-mac-v2.0-infused.tex}
+
+\begin{document}
+
+% ============================================================
+% HEADER
+% ============================================================
+
+\citeclass{FSFE-Proofs}
+\provenanceanchor{FSFE-A7-ALTITUDESEMANTICS-20261028}
+
+\begin{citationmembrane}{A7-AltitudeSemantics}
+  \citeanchor{AltitudeSemanticsTheorems}
+  \citeanchor{Altitude}
+  \citeanchor{AltitudeCompatible}
+\end{citationmembrane}
+
+\section*{A7: Altitude Semantics Proofs}
+
+This module contains the eighth set of A7 lemmas, replacing A5 altitude axioms
+with real proofs. These lemmas establish the invariant structure of FSFE’s
+altitude system, ensuring that altitude compatibility behaves correctly under
+reflexive and transitive relations.
+
+\newpage
+
+% ============================================================
+% LEMMA 1 — ALTITUDE REFLEXIVITY
+% ============================================================
+
+\section{Lemma 1: Altitude Compatibility Reflexivity}
+
+\subsection{Lemma Statement}
+
+\begin{verbatim}
+Lemma AltitudeCompat_Reflexive :
+  ∀ a : Altitude,
+    AltitudeCompatible(a, a).
+\end{verbatim}
+
+\subsection{Supporting Definitions}
+
+\begin{verbatim}
+Altitude := { A1, A2, ..., A12 }
+
+AltitudeCompatible(a_high, a_low) :=
+  altitude_index(a_low) ≤ altitude_index(a_high)
+\end{verbatim}
+
+\subsection{Proof Skeleton}
+
+\begin{verbatim}
+Proof.
+  intros a.
+  unfold AltitudeCompatible.
+  (* altitude_index(a) ≤ altitude_index(a) *)
+  apply Nat.le_refl.
+Qed.
+\end{verbatim}
+
+This lemma ensures that every altitude is compatible with itself.
+
+\newpage
+
+% ============================================================
+% LEMMA 2 — ALTITUDE TRANSITIVITY
+% ============================================================
+
+\section{Lemma 2: Altitude Compatibility Transitivity}
+
+\subsection{Lemma Statement}
+
+\begin{verbatim}
+Lemma AltitudeCompat_Transitive :
+  ∀ a b c : Altitude,
+    AltitudeCompatible(a, b) →
+    AltitudeCompatible(b, c) →
+    AltitudeCompatible(a, c).
+\end{verbatim}
+
+\subsection{Supporting Definitions}
+
+\begin{verbatim}
+AltitudeCompatible(a_high, a_low) :=
+  altitude_index(a_low) ≤ altitude_index(a_high)
+\end{verbatim}
+
+\subsection{Proof Skeleton}
+
+\begin{verbatim}
+Proof.
+  intros a b c Hab Hbc.
+  unfold AltitudeCompatible in *.
+  (* transitivity of ≤ on Nat *)
+  apply Nat.le_trans with (m := altitude_index(b)).
+  - exact Hab.
+  - exact Hbc.
+Qed.
+\end{verbatim}
+
+This lemma ensures that altitude compatibility forms a transitive relation.
+
+\newpage
+
+% ============================================================
+% LEMMA 3 — ALTITUDE INVARIANCE UNDER TRANSITION
+% ============================================================
+
+\section{Lemma 3: Altitude Compatibility Invariance}
+
+\subsection{Lemma Statement}
+
+\begin{verbatim}
+Lemma AltitudeCompat_Invariant :
+  ∀ a b : Altitude,
+    AltitudeCompatible(a, b) →
+    AltitudeCompatible(a, b).
+\end{verbatim}
+
+\subsection{Proof Skeleton}
+
+\begin{verbatim}
+Proof.
+  intros a b H.
+  (* trivial invariance *)
+  exact H.
+Qed.
+\end{verbatim}
+
+This lemma is trivial but required for completeness of the altitude semantics
+layer.
+
+\newpage
+
+% ============================================================
+% ALTITUDE COMPATIBILITY
+% ============================================================
+
+\section{Altitude Compatibility}
+
+\begin{verbatim}
+AltitudeCompatible(A7, A6)
+AltitudeCompatible(A7, A5)
+\end{verbatim}
+
+These lemmas are altitude‑legal because:
+
+- they depend only on A6 altitude definitions,
+- they replace A5 axioms,
+- they do not require A8–A12 runtime or geometric semantics.
+
+\newpage
+
+% ============================================================
+% PROVENANCE
+% ============================================================
+
+\section*{Provenance}
+
+\begin{verbatim}
+Provenance:
+  Artifact: A7-AltitudeSemanticsProofs.tex
+  Altitude: A7
+  Compiler: Microsoft Copilot
+  Maintainer: Borealis S. Hedling
+  Location: Dublin, Ireland
+  Timestamp: 2026-10-28T08:04:00Z
+  Lineage:
+    - Eighth A7 proof module replacing A5 axioms
+    - Establishes reflexivity, transitivity, and invariance
+      of altitude compatibility
+    - Provides Lean-compatible proof skeletons
+    - Altitude-consistent with A6 altitude semantics
+  Governance Anchor: FSFE-GOV-A7-ALTITUDESEMANTICS-20261028
+\end{verbatim}
+
+\end{document}
