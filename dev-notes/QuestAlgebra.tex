@@ -1,0 +1,129 @@
+% ============================================================
+% Reversible Quest Algebra
+% Fun-Sphere Fantasy Engine
+% Author: Borealis S. Hedling
+% ============================================================
+
+\section*{Reversible Operator Group}
+
+\[
+\mathcal{G}_{rev}
+= \{ O \in \mathrm{Diff}(X_{45}) \mid O^{-1} \text{ exists} \}
+\]
+
+\[
+O^{-1} \circ O = \mathrm{id},\qquad
+O \circ O^{-1} = \mathrm{id}
+\]
+
+% ------------------------------------------------------------
+
+\section*{Quest Definition}
+
+\[
+Q = (O_1, O_2, \ldots, O_n)
+\]
+
+\[
+Q \in \mathcal{G}_{rev}^n
+\]
+
+% ------------------------------------------------------------
+
+\section*{Quest Evaluation}
+
+\[
+Q(x)
+= O_n \circ O_{n-1} \circ \cdots \circ O_1 (x)
+\]
+
+% ------------------------------------------------------------
+
+\section*{Inverse Quest}
+
+\[
+Q^{-1}
+= (O_n^{-1}, O_{n-1}^{-1}, \ldots, O_1^{-1})
+\]
+
+\[
+Q^{-1}(x)
+= O_1^{-1} \circ O_2^{-1} \circ \cdots \circ O_n^{-1}(x)
+\]
+
+% ------------------------------------------------------------
+
+\section*{Quest Composition}
+
+\[
+Q \circ P
+= (O_1, \ldots, O_n, P_1, \ldots, P_m)
+\]
+
+\[
+(Q \circ P)(x)
+= P_m \circ \cdots \circ P_1 \circ O_n \circ \cdots \circ O_1 (x)
+\]
+
+% ------------------------------------------------------------
+
+\section*{Quest Identity}
+
+\[
+Q_{\mathrm{id}} = (\mathrm{id})
+\]
+
+\[
+Q_{\mathrm{id}}(x) = x
+\]
+
+% ------------------------------------------------------------
+
+\section*{Quest Group Structure}
+
+\[
+(Q \circ P)^{-1}
+= P^{-1} \circ Q^{-1}
+\]
+
+\[
+(Q^{-1})^{-1} = Q
+\]
+
+\[
+Q \circ Q^{-1} = Q^{-1} \circ Q = Q_{\mathrm{id}}
+\]
+
+% ------------------------------------------------------------
+
+\section*{Quest Curvature}
+
+\[
+\mathcal{R}_Q
+= \sum_{i=1}^{n}
+\mathcal{R}_{FS}(O_i)
+\]
+
+% ------------------------------------------------------------
+
+\section*{Quest Holonomy}
+
+\[
+\mathcal{H}_Q
+= \prod_{i=1}^{n}
+\mathcal{H}_{FS}(O_i)
+\]
+
+% ------------------------------------------------------------
+
+\section*{Quest Stability}
+
+\[
+\|\mathcal{R}_Q\| < \epsilon
+\]
+
+\[
+\|\mathcal{H}_Q\| < \delta
+\]
+
+% ============================================================
