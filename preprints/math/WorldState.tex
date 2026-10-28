@@ -1,0 +1,228 @@
+% ============================================================
+% World State Tensor — FSFE Runtime Physics
+% Author: Borealis S. Hedling
+% ============================================================
+
+\section*{World Manifold}
+
+\[
+W : X_{45} \to \mathcal{S}
+\]
+
+\[
+\mathcal{S}
+= (Z, F, M, E, \mathcal{P}, r, Q, I)
+\]
+
+Where:
+
+- \(Z\) = zones  
+- \(F\) = factions  
+- \(M\) = monster families  
+- \(E\) = events  
+- \(\mathcal{P}\) = player state  
+- \(r\) = rasa tensor  
+- \(Q\) = quest algebra  
+- \(I\) = inventory tensor  
+
+% ------------------------------------------------------------
+% ZONES
+% ------------------------------------------------------------
+
+\section*{Zones}
+
+\[
+Z = (g_Z, \mathcal{R}_Z, \mathcal{H}_Z, v_k, A_Z)
+\]
+
+Zone evolution:
+
+\[
+\frac{\partial Z}{\partial t}
+= H_Z(Z)
++ \lambda_k Z
++ \nabla_{FS} Z
++ \mathcal{I}_{ZE}(Z, v_k)
++ \mathcal{I}_{ZR}(Z, r)
+\]
+
+% ------------------------------------------------------------
+% FACTIONS
+% ------------------------------------------------------------
+
+\section*{Factions}
+
+\[
+F_j = (T_j, R_j, H_j)
+\]
+
+Where:
+
+- \(T_j\) = territory  
+- \(R_j\) = resources  
+- \(H_j\) = hostility matrix  
+
+Faction evolution:
+
+\[
+\frac{\partial F_j}{\partial t}
+= \phi(T_j, R_j, H_j, Z, E)
+\]
+
+% ------------------------------------------------------------
+% MONSTER FAMILIES
+% ------------------------------------------------------------
+
+\section*{Monster Families}
+
+\[
+M_k = (\lambda_k, v_k, A_k)
+\]
+
+Monster evolution:
+
+\[
+\frac{\partial M_k}{\partial t}
+= h(Z, \mathcal{P}, F)
+\]
+
+% ------------------------------------------------------------
+% EVENTS
+% ------------------------------------------------------------
+
+\section*{Events}
+
+\[
+E = \{E_1, \ldots, E_n\}
+\]
+
+Event evolution:
+
+\[
+\frac{\partial E_i}{\partial t}
+= \delta(\tau_i, Z, F, M)
+\]
+
+Event → world update:
+
+\[
+W' = O_{E_i}(W)
+\quad \text{if } \Theta_i(W) = 1
+\]
+
+% ------------------------------------------------------------
+% PLAYER STATE
+% ------------------------------------------------------------
+
+\section*{Player State}
+
+\[
+\mathcal{P}
+= (HP, AP, DF, SPD, ACC, EV, C_{\text{crit}}, M_{\text{crit}},
+R, CD, I, r, Z)
+\]
+
+Player evolution:
+
+\[
+\frac{\partial \mathcal{P}}{\partial t}
+= \nabla_{FS}\mathcal{P}
++ \Delta\mathcal{P}_{inv}
++ \Delta\mathcal{P}_{rasa}
++ \Delta\mathcal{P}_{zone}
+\]
+
+% ------------------------------------------------------------
+% RASA
+% ------------------------------------------------------------
+
+\section*{Rasa}
+
+\[
+r \in \mathbb{C}^9
+\]
+
+Rasa evolution:
+
+\[
+\frac{\partial r}{\partial t}
+= \mathcal{D}_{rasa}(r)
+\]
+
+% ------------------------------------------------------------
+% QUEST ALGEBRA
+% ------------------------------------------------------------
+
+\section*{Quest Algebra}
+
+\[
+Q = (O_1, \ldots, O_n)
+\]
+
+Quest evolution:
+
+\[
+Q' = Q \circ O_{\text{combat}} \circ O_{\text{inv}} \circ O_{E}
+\]
+
+% ------------------------------------------------------------
+% INVENTORY
+% ------------------------------------------------------------
+
+\section*{Inventory}
+
+\[
+I = \sum_{i=1}^{m} n_i e_i
+\]
+
+Inventory evolution:
+
+\[
+\frac{\partial I}{\partial t}
+= \sum_{i=1}^{m} \frac{\partial n_i}{\partial t} e_i
+\]
+
+% ------------------------------------------------------------
+% FULL WORLD STATE EVOLUTION
+% ------------------------------------------------------------
+
+\section*{World State Evolution}
+
+\[
+\frac{\partial W}{\partial t}
+= \nabla_{FS} W
++ \mathcal{I}_{ZE}
++ \mathcal{I}_{ZR}
++ \mathcal{I}_{Q}
++ \mathcal{I}_{inv}
++ \mathcal{I}_{event}
+\]
+
+Where:
+
+\[
+\mathcal{I}_{event}
+= \sum_{i=1}^{n} O_{E_i}(W)
+\]
+
+% ------------------------------------------------------------
+% GOVERNANCE
+% ------------------------------------------------------------
+
+\section*{Governance}
+
+\[
+W^{(45)} = G(C(L_u(W^{(42)})))
+\]
+
+Stability:
+
+\[
+\|\mathcal{R}_{FS}(W)\| < \epsilon
+\]
+
+\[
+\|\mathcal{H}_{FS}(W)\| < \delta
+\]
+
+% ============================================================
