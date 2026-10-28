@@ -1,0 +1,193 @@
+% ============================================================
+% Appendix B — TikZ Diagram Set for 42D → 45D Lift Geometry
+% Fun-Sphere Fantasy Engine — Preprint Figures
+% Location: fun-sphere-fantasy-engine/preprints/figures/
+% Author: Borealis S. Hedling
+% Date: October 2026
+% ============================================================
+
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+
+% ============================================================
+% Diagram B1 — NDH Altitude Layers
+% ============================================================
+\begin{tikzpicture}[
+    node distance=2.5cm,
+    every node/.style={draw, rectangle, rounded corners, padding=6pt}
+]
+
+\node (x42) {X\textsubscript{42}\\Interpretation};
+\node (x43) [right=of x42] {X\textsubscript{43}\\Understanding};
+\node (x44) [right=of x43] {X\textsubscript{44}\\Coherence};
+\node (x45) [right=of x44] {X\textsubscript{45}\\Governance};
+
+\draw[-{Latex}] (x42) -- node[above] {$L_u$} (x43);
+\draw[-{Latex}] (x43) -- node[above] {$C$} (x44);
+\draw[-{Latex}] (x44) -- node[above] {$G$} (x45);
+
+\end{tikzpicture}
+
+\vspace{1cm}
+
+% ============================================================
+% Diagram B2 — Lift Operator
+% ============================================================
+\begin{tikzpicture}[
+    node distance=3cm,
+    every node/.style={draw, rectangle, rounded corners, padding=6pt}
+]
+
+\node (x42) {X\textsubscript{42}\\Resonance Fields};
+\node (x43) [right=of x42] {X\textsubscript{43}\\Semantic Lift};
+
+\draw[-{Latex}] (x42) -- node[above] {$L_u$} (x43);
+
+\end{tikzpicture}
+
+\vspace{1cm}
+
+% ============================================================
+% Diagram B3 — Coherence Operator
+% ============================================================
+\begin{tikzpicture}[
+    node distance=3cm,
+    every node/.style={draw, rectangle, rounded corners, padding=6pt}
+]
+
+\node (x43) {X\textsubscript{43}\\Semantic Curvature};
+\node (x44) [right=of x43] {X\textsubscript{44}\\Cross-Zone Coherence};
+
+\draw[-{Latex}] (x43) -- node[above] {$C$} (x44);
+
+\end{tikzpicture}
+
+\vspace{1cm}
+
+% ============================================================
+% Diagram B4 — Governance Operator
+% ============================================================
+\begin{tikzpicture}[
+    node distance=3cm,
+    every node/.style={draw, rectangle, rounded corners, padding=6pt}
+]
+
+\node (x44) {X\textsubscript{44}\\Zone Consistency};
+\node (x45) [right=of x44] {X\textsubscript{45}\\Narrative Physics};
+
+\draw[-{Latex}] (x44) -- node[above] {$G$} (x45);
+
+\end{tikzpicture}
+
+\vspace{1cm}
+
+% ============================================================
+% Diagram B5 — Ternary Projection Collapse
+% ============================================================
+\begin{tikzpicture}[
+    node distance=3cm,
+    every node/.style={draw, rectangle, rounded corners, padding=6pt}
+]
+
+\node (x42) {X\textsubscript{42}\\Resonance Fields};
+\node (v3a) [right=of x42] {V\textsubscript{3}\\Ternary Projection};
+\node (v3b) [right=of v3a] {V\textsubscript{3}\\Collapsed};
+
+\draw[-{Latex}] (x42) -- node[above] {$\Pi$} (v3a);
+\draw[-{Latex}] (v3a) -- node[above] {$C_3$} (v3b);
+
+\end{tikzpicture}
+
+\vspace{1cm}
+
+% ============================================================
+% Diagram B6 — Holonomy Collapse
+% ============================================================
+\begin{tikzpicture}[
+    node distance=3cm,
+    every node/.style={draw, rectangle, rounded corners, padding=6pt}
+]
+
+\node (x42a) {X\textsubscript{42}\\Holonomy};
+\node (x42b) [right=of x42a] {X\textsubscript{42}\\Twist Curvature};
+
+\draw[-{Latex}] (x42a) -- node[above] {$R_\theta$} (x42b);
+
+\node (v3a) [below=2cm of x42a] {V\textsubscript{3}\\Projection};
+\node (v3b) [right=of v3a] {V\textsubscript{3}\\Holonomy Lost};
+
+\draw[-{Latex}] (x42a) -- node[left] {$\Pi$} (v3a);
+\draw[-{Latex}] (x42b) -- node[right] {$\Pi$} (v3b);
+
+\end{tikzpicture}
+
+\vspace{1cm}
+
+% ============================================================
+% Diagram B7 — Fun-Sphere Physics Pipeline
+% ============================================================
+\begin{tikzpicture}[
+    node distance=2.5cm,
+    every node/.style={draw, rectangle, rounded corners, padding=6pt}
+]
+
+\node (x42) {X\textsubscript{42}\\Interpretation};
+\node (x43) [right=of x42] {X\textsubscript{43}\\Lift};
+\node (x44) [right=of x43] {X\textsubscript{44}\\Coherence};
+\node (x45) [right=of x44] {X\textsubscript{45}\\Runtime Physics};
+
+\draw[-{Latex}] (x42) -- node[above] {$L_u$} (x43);
+\draw[-{Latex}] (x43) -- node[above] {$C$} (x44);
+\draw[-{Latex}] (x44) -- node[above] {$G$} (x45);
+
+\end{tikzpicture}
+
+\vspace{1cm}
+
+% ============================================================
+% Diagram B8 — Failure Mode (42D + Ternary)
+% ============================================================
+\begin{tikzpicture}[
+    node distance=3cm,
+    every node/.style={draw, rectangle, rounded corners, padding=6pt}
+]
+
+\node (x42) {X\textsubscript{42}\\Resonance Fields};
+\node (v3a) [right=of x42] {V\textsubscript{3}\\Projection Only};
+\node (v3b) [right=of v3a] {V\textsubscript{3}\\Collapsed};
+
+\draw[-{Latex}] (x42) -- node[above] {$\Pi$} (v3a);
+\draw[-{Latex}] (v3a) -- node[above] {$C_3$} (v3b);
+
+\node[below=1.5cm of v3a, align=center] (fail) {
+NO $L_u$\\
+NO $C$\\
+NO $G$\\
+NO holonomy\\
+NO reversibility\\
+NO narrative manifold\\
+NO zone physics
+};
+
+\end{tikzpicture}
+
+\vspace{1cm}
+
+% ============================================================
+% Diagram B9 — Summary Diagram
+% ============================================================
+\begin{tikzpicture}[
+    node distance=3cm,
+    every node/.style={draw, rectangle, rounded corners, padding=6pt}
+]
+
+\node (stack) {NDH Altitude Stack:\\X42 → X43 → X44 → X45};
+\node (ternary) [right=of stack] {Ternary Projection:\\X42 → V3 → V3};
+\node (need) [right=of ternary] {Fun-Sphere Requires:\\X43, X44, X45};
+
+\end{tikzpicture}
+
+\end{document}
