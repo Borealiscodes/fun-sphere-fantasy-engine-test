@@ -1,0 +1,362 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+% Load your ontology macros
+\input{citation-ontology-mac-v2.0-infused.tex}
+
+\begin{document}
+
+% ============================================================
+% TITLE PAGE
+% ============================================================
+
+\citeclass{FSFE-Title}
+\provenanceanchor{FSFE-A6-TITLE-20261028}
+
+\begin{center}
+{\Large \textbf{Fun-Sphere Firewall Companion}}\\[6pt]
+{\large A Reversible Physics Architecture for Geometric AI}\\[12pt]
+Borealis S. Hedling\\
+Dublin, Ireland\\
+2026
+\end{center}
+
+\newpage
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+
+\begin{citationmembrane}{A6-Abstract}
+  \citeanchor{FSFEOverview}
+  \citeanchor{ReversiblePhysics}
+  \citeanchor{Holonomy}
+  \citeanchor{Emb80}
+\end{citationmembrane}
+
+\section*{Abstract}
+
+This work introduces the Fun-Sphere Firewall Companion (FSFE), a reversible
+physics architecture for geometric AI. FSFE integrates reversible operator
+algebra, holonomy-preserving geometric structures, an 80-dimensional embedding
+manifold, altitude-layer documentation grammar, and a multi-altitude formal
+verification stack. Runtime correspondence and completeness/soundness results
+are outlined.
+
+\newpage
+
+% ============================================================
+% INTRODUCTION
+% ============================================================
+
+\citeclass{FSFE-Intro}
+\provenanceanchor{FSFE-A6-INTRO-20261028}
+
+\section{Introduction}
+
+\subsection{Motivation}
+Reversible physics provides structural guarantees for geometric AI systems.
+
+\subsection{FSFE Overview}
+FSFE consists of:
+\begin{itemize}
+  \item $\Sigma/\Lambda$ reversible counters
+  \item Quest Algebra branching
+  \item Tensor Coupling
+  \item Branch Stability
+  \item Holonomy geometry
+  \item 80D embedding manifold
+  \item Altitude documentation system
+  \item Tile grammar
+\end{itemize}
+
+\subsection{Contributions}
+A concise list of FSFE contributions.
+
+\newpage
+
+% ============================================================
+% SYSTEM ARCHITECTURE
+% ============================================================
+
+\begin{citationmembrane}{A6-SystemArchitecture}
+  \citeanchor{AltitudeMap}
+  \citeanchor{OperatorSuite}
+  \citeanchor{HolonomyModel}
+  \citeanchor{EmbeddingManifold}
+\end{citationmembrane}
+
+\section{System Architecture Overview}
+
+\subsection{Altitude Layers}
+Conceptual separation A1--A12.
+
+\subsection{Reversible Physics Engine}
+Operator suite and state machine.
+
+\subsection{Geometric Structures}
+Holonomy and embedding manifold.
+
+\subsection{Documentation Grammar}
+Tile system and altitude rules.
+
+\newpage
+
+% ============================================================
+% FORMAL DEFINITIONS
+% ============================================================
+
+\citeclass{FSFE-Definitions}
+\provenanceanchor{FSFE-A6-DEFINITIONS-20261028}
+
+\section{Formal Definitions}
+
+\subsection{FSFEState}
+\begin{verbatim}
+FSFEState := {
+  sigma      : Nat,
+  lambda     : Nat,
+  qa         : QAState,
+  tensor     : TensorState,
+  branch     : BranchState,
+  holonomy   : HolonomyState,
+  embedding  : Emb80
+}
+\end{verbatim}
+
+\subsection{Reversible Operators}
+\begin{verbatim}
+Σ_inc(s) := { s with sigma := s.sigma + 1 }
+Λ_inc(s) := { s with lambda := s.lambda + 1 }
+QuestStep(s) := { s with qa := QA_next(s.qa) }
+TensorCouple(s) := { s with tensor := Tensor_couple(s.tensor) }
+StabilizeBranch(s) := { s with branch := Branch_stable(s.branch) }
+MobileTransition(s, t) := Transition_apply(s, t)
+\end{verbatim}
+
+\subsection{Invariants}
+\begin{verbatim}
+Inv_struct(s) := ...
+Inv_hol(s) := ...
+Inv_emb(s) := ...
+FSFEInvariant(s) := ...
+\end{verbatim}
+
+\subsection{Holonomy Model}
+\begin{verbatim}
+HolonomyState := {
+  connection : Conn,
+  curvature  : Curv,
+  transport  : Transport,
+  group      : HolGroup
+}
+\end{verbatim}
+
+\subsection{Embedding Manifold}
+\begin{verbatim}
+Emb80 := {
+  coords : Fin 80 → Real,
+  metric : Metric80,
+  chart  : Chart80,
+  trans  : Transition80
+}
+\end{verbatim}
+
+\subsection{Altitude Semantics}
+\begin{verbatim}
+Altitude := { A1, A2, ..., A12 }
+AltitudeCompatible(a_high, a_low) :=
+  altitude_index(a_low) ≤ altitude_index(a_high)
+\end{verbatim}
+
+\subsection{Tile Grammar}
+\begin{verbatim}
+Tile :=
+  | Concept | Operator | Invariant | Transition
+  | Algebra | Geometry | Runtime | Telemetry | Meta
+\end{verbatim}
+
+\subsection{Documentation Composition}
+\begin{verbatim}
+Document := { tiles : List Tile }
+DocumentValid(d) := ...
+\end{verbatim}
+
+\newpage
+
+% ============================================================
+% THEOREM STATEMENTS
+% ============================================================
+
+\begin{citationmembrane}{A6-Theorems}
+  \citeanchor{InvariantTheorems}
+  \citeanchor{OperatorAlgebraTheorems}
+  \citeanchor{HolonomyTheorems}
+  \citeanchor{EmbeddingTheorems}
+\end{citationmembrane}
+
+\section{Theorem Statements}
+
+\subsection{State Invariant Theorems}
+\begin{verbatim}
+Theorem StructuralInvariantPreserved : ...
+Theorem HolonomyInvariantPreserved : ...
+Theorem EmbeddingInvariantPreserved : ...
+\end{verbatim}
+
+\subsection{Operator Algebra Theorems}
+\begin{verbatim}
+Theorem OperatorComposeAssociative : ...
+Theorem OperatorIdentityNeutral : ...
+Theorem SigmaLambdaReversible : ...
+\end{verbatim}
+
+\subsection{Quest Algebra Theorems}
+\begin{verbatim}
+Theorem QuestStepProgress : ...
+Theorem QuestTensorStability : ...
+\end{verbatim}
+
+\subsection{Tensor Coupling Theorems}
+\begin{verbatim}
+Theorem TensorRankPreserved : ...
+Theorem TensorDimensionStable : ...
+\end{verbatim}
+
+\subsection{Branch Stability Theorems}
+\begin{verbatim}
+Theorem BranchStabilization : ...
+Theorem BranchMobileStable : ...
+\end{verbatim}
+
+\subsection{Holonomy Theorems}
+\begin{verbatim}
+Theorem HolonomyGroupClosed : ...
+Theorem ParallelTransportCompatible : ...
+\end{verbatim}
+
+\subsection{Embedding Manifold Theorems}
+\begin{verbatim}
+Theorem ChartTransitionValid : ...
+Theorem MetricPreserved : ...
+\end{verbatim}
+
+\subsection{Altitude Semantics Theorems}
+\begin{verbatim}
+Theorem AltitudeCompatReflexive : ...
+Theorem AltitudeCompatTransitive : ...
+\end{verbatim}
+
+\subsection{Tile Grammar Theorems}
+\begin{verbatim}
+Theorem TileSequenceStable : ...
+Theorem MetaTileCompatible : ...
+\end{verbatim}
+
+\subsection{Documentation Composition Theorems}
+\begin{verbatim}
+Theorem DocumentCompositionStable : ...
+Theorem DocumentAltitudePreserved : ...
+\end{verbatim}
+
+\newpage
+
+% ============================================================
+% RUNTIME CORRESPONDENCE
+% ============================================================
+
+\citeclass{FSFE-Runtime}
+\provenanceanchor{FSFE-A6-RUNTIME-20261028}
+
+\section{Runtime Correspondence}
+
+\subsection{Python/Rust Reversible Runtime}
+\subsection{Telemetry Adapter}
+\subsection{Constellation Engine}
+\subsection{Reversible State Projection}
+\subsection{Runtime Invariant Preservation}
+
+\newpage
+
+% ============================================================
+% GEOMETRY
+% ============================================================
+
+\begin{citationmembrane}{A6-Geometry}
+  \citeanchor{Holonomy}
+  \citeanchor{Curvature}
+  \citeanchor{ParallelTransport}
+\end{citationmembrane}
+
+\section{Geometry}
+
+\subsection{Holonomy}
+\subsection{Curvature}
+\subsection{Parallel Transport}
+\subsection{Holonomy Group}
+\subsection{Holonomy Invariants}
+
+\newpage
+
+% ============================================================
+% EMBEDDING MANIFOLD
+% ============================================================
+
+\citeclass{FSFE-Embedding}
+\provenanceanchor{FSFE-A6-EMBEDDING-20261028}
+
+\section{Embedding Manifold}
+
+\subsection{Coordinate Charts}
+\subsection{Metric}
+\subsection{Transition Maps}
+\subsection{Embedding Invariants}
+\subsection{Embedding Preservation}
+
+\newpage
+
+% ============================================================
+% VERIFICATION
+% ============================================================
+
+\begin{citationmembrane}{A6-Verification}
+  \citeanchor{FSFEAxioms}
+  \citeanchor{Completeness}
+  \citeanchor{Soundness}
+  \citeanchor{Normalization}
+  \citeanchor{AltitudeTransitions}
+\end{citationmembrane}
+
+\section{Verification}
+
+\subsection{Axioms (A5)}
+\subsection{Completeness (A5)}
+\subsection{Soundness (A7--A12)}
+\subsection{Normalization}
+\subsection{Altitude Transitions}
+\subsection{Tile Composition}
+
+\newpage
+
+% ============================================================
+% APPENDIX STRUCTURE
+% ============================================================
+
+\citeclass{FSFE-Appendix}
+\provenanceanchor{FSFE-A6-APPENDIX-20261028}
+
+\section{Appendix Structure}
+
+\begin{verbatim}
+Appendix A — Operator Algebra Expansion
+Appendix B — Holonomy Tensor Derivations
+Appendix C — Embedding Manifold Charts
+Appendix D — Transition Membrane Formalism
+Appendix E — Telemetry Projection Math
+Appendix F — Altitude Grammar Formalization
+Appendix G — Runtime Correspondence Proofs
+\end{verbatim}
+
+\end{document}
