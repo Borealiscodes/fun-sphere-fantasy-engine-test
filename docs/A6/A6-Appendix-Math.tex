@@ -1,0 +1,219 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+% Load ontology macros
+\input{citation-ontology-mac-v2.0-infused.tex}
+
+\begin{document}
+
+% ============================================================
+% APPENDIX MASTER HEADER
+% ============================================================
+
+\citeclass{FSFE-Appendix}
+\provenanceanchor{FSFE-A6-APPENDIX-20261028}
+
+\section*{Appendix: Mathematical Foundations}
+
+This appendix provides the mathematical expansions, derivations, and formal
+structures referenced throughout the FSFE preprint. All content here is
+altitude-aligned and citation-ontology compliant.
+
+\newpage
+
+% ============================================================
+% APPENDIX A — OPERATOR ALGEBRA EXPANSION
+% ============================================================
+
+\begin{citationmembrane}{A6-Appendix-OperatorAlgebra}
+  \citeanchor{OperatorSuite}
+  \citeanchor{OperatorAlgebraTheorems}
+\end{citationmembrane}
+
+\section{Appendix A: Operator Algebra Expansion}
+
+\subsection{Operator Composition}
+\begin{verbatim}
+OpCompose : Op → Op → Op
+OpCompose f g := λ s, g (f s)
+\end{verbatim}
+
+\subsection{Associativity Expansion}
+Placeholder for full associativity derivation.
+
+\subsection{Identity Operator}
+Placeholder for identity neutrality derivation.
+
+\subsection{Reversibility}
+Placeholder for Σ/Λ reversibility derivation.
+
+\newpage
+
+% ============================================================
+% APPENDIX B — HOLONOMY TENSOR DERIVATIONS
+% ============================================================
+
+\begin{citationmembrane}{A6-Appendix-Holonomy}
+  \citeanchor{Holonomy}
+  \citeanchor{Curvature}
+  \citeanchor{ParallelTransport}
+\end{citationmembrane}
+
+\section{Appendix B: Holonomy Tensor Derivations}
+
+\subsection{Connection}
+\begin{verbatim}
+∇_X Y = connection(X, Y)
+\end{verbatim}
+
+\subsection{Curvature Tensor}
+\begin{verbatim}
+R(X, Y)Z = ∇_X ∇_Y Z - ∇_Y ∇_X Z - ∇_[X,Y] Z
+\end{verbatim}
+
+\subsection{Parallel Transport}
+Placeholder for full derivation.
+
+\subsection{Holonomy Group}
+Placeholder for group closure proof structure.
+
+\newpage
+
+% ============================================================
+% APPENDIX C — EMBEDDING MANIFOLD CHARTS
+% ============================================================
+
+\begin{citationmembrane}{A6-Appendix-Embedding}
+  \citeanchor{EmbeddingManifold}
+  \citeanchor{EmbeddingTheorems}
+\end{citationmembrane}
+
+\section{Appendix C: Embedding Manifold Charts}
+
+\subsection{Coordinate Chart Definition}
+\begin{verbatim}
+Chart80 : Emb80 → (Fin 80 → ℝ)
+\end{verbatim}
+
+\subsection{Metric Tensor}
+\begin{verbatim}
+Metric80 : (Fin 80 × Fin 80 → ℝ)
+\end{verbatim}
+
+\subsection{Transition Maps}
+Placeholder for chart transition derivations.
+
+\subsection{Embedding Invariants}
+Placeholder for metric preservation derivation.
+
+\newpage
+
+% ============================================================
+% APPENDIX D — TRANSITION MEMBRANE FORMALISM
+% ============================================================
+
+\begin{citationmembrane}{A6-Appendix-TransitionMembrane}
+  \citeanchor{TransitionMembrane}
+  \citeanchor{AltitudeTransitions}
+\end{citationmembrane}
+
+\section{Appendix D: Transition Membrane Formalism}
+
+\subsection{FSMTransition Structure}
+\begin{verbatim}
+FSMTransition := {
+  tag     : TransitionTag,
+  payload : TransitionPayload
+}
+\end{verbatim}
+
+\subsection{State Machine Step}
+\begin{verbatim}
+FSMStep(t, s) := MobileTransition(s, t)
+\end{verbatim}
+
+\subsection{Altitude Constraints}
+Placeholder for altitude compatibility derivation.
+
+\newpage
+
+% ============================================================
+% APPENDIX E — TELEMETRY PROJECTION MATH
+% ============================================================
+
+\begin{citationmembrane}{A6-Appendix-Telemetry}
+  \citeanchor{Telemetry}
+  \citeanchor{RuntimeCorrespondence}
+\end{citationmembrane}
+
+\section{Appendix E: Telemetry Projection Math}
+
+\subsection{Projection Definition}
+\begin{verbatim}
+ProjectToTelemetry(s) := {
+  Σ      := s.sigma,
+  Λ      := s.lambda,
+  branch := s.qa.branch,
+  depth  := s.qa.depth,
+  rank   := s.tensor.rank,
+  dim    := s.tensor.dim
+}
+\end{verbatim}
+
+\subsection{Projection Invariants}
+Placeholder for invariant preservation derivation.
+
+\newpage
+
+% ============================================================
+% APPENDIX F — ALTITUDE GRAMMAR FORMALIZATION
+% ============================================================
+
+\begin{citationmembrane}{A6-Appendix-AltitudeGrammar}
+  \citeanchor{AltitudeMap}
+  \citeanchor{TileGrammar}
+\end{citationmembrane}
+
+\section{Appendix F: Altitude Grammar Formalization}
+
+\subsection{Altitude Ordering}
+\begin{verbatim}
+Altitude := { A1, A2, ..., A12 }
+\end{verbatim}
+
+\subsection{Tile Altitude}
+\begin{verbatim}
+TileAltitude(Concept)    = A3
+TileAltitude(Operator)   = A5
+TileAltitude(Runtime)    = A9
+...
+\end{verbatim}
+
+\subsection{Grammar Rules}
+Placeholder for full grammar derivation.
+
+\newpage
+
+% ============================================================
+% APPENDIX G — RUNTIME CORRESPONDENCE PROOFS
+% ============================================================
+
+\begin{citationmembrane}{A6-Appendix-Runtime}
+  \citeanchor{RuntimeCorrespondence}
+  \citeanchor{Soundness}
+\end{citationmembrane}
+
+\section{Appendix G: Runtime Correspondence Proofs}
+
+\subsection{Python/Rust Correspondence}
+Placeholder for reversible runtime mapping.
+
+\subsection{Invariant Preservation}
+Placeholder for runtime invariant derivation.
+
+\subsection{Telemetry Consistency}
+Placeholder for telemetry correspondence proof.
+
+\end{document}
