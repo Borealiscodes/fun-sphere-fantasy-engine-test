@@ -1,0 +1,159 @@
+% ============================================================
+% Event Tensor — FSFE Runtime Physics
+% Author: Borealis S. Hedling
+% ============================================================
+
+\section*{Event State Space}
+
+\[
+\mathcal{E} = \{E_1, E_2, \ldots, E_k\}
+\]
+
+Each event:
+
+\[
+E_i = (\tau_i, \Theta_i, O_{E_i})
+\]
+
+Where:
+
+- \(\tau_i \in \mathbb{R}_{\ge 0}\) = event timer  
+- \(\Theta_i : W \to \{0,1\}\) = trigger predicate  
+- \(O_{E_i} : W \to W\) = event operator  
+
+% ------------------------------------------------------------
+% EVENT TIMERS
+% ------------------------------------------------------------
+
+\section*{Event Timers}
+
+\[
+\frac{\partial \tau_i}{\partial t} = 1
+\]
+
+Reset rule:
+
+\[
+\tau_i' = 0 \quad \text{if } \Theta_i(W) = 1
+\]
+
+% ------------------------------------------------------------
+% EVENT TRIGGERS
+% ------------------------------------------------------------
+
+\section*{Event Trigger Predicate}
+
+\[
+\Theta_i(W)
+=
+\begin{cases}
+1 & \text{if conditions satisfied} \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+Conditions may depend on:
+
+\[
+(Z, F, M, \mathcal{P}, r, Q, I)
+\]
+
+% ------------------------------------------------------------
+% EVENT OPERATORS
+% ------------------------------------------------------------
+
+\section*{Event Operators}
+
+Event operator:
+
+\[
+O_{E_i}(W)
+= W + \Delta W_i
+\]
+
+Inverse:
+
+\[
+O_{E_i}^{-1}(W)
+= W - \Delta W_i
+\]
+
+Where \(\Delta W_i\) may modify:
+
+- zone difficulty  
+- faction territory  
+- monster ecology  
+- player state  
+- inventory  
+- rasa  
+- quest state  
+
+% ------------------------------------------------------------
+% EVENT EVOLUTION
+% ------------------------------------------------------------
+
+\section*{Event Evolution}
+
+\[
+\frac{\partial E_i}{\partial t}
+= \delta(\tau_i, Z, F, M)
+\]
+
+Where:
+
+\[
+\delta : (\mathbb{R}_{\ge 0}, Z, F, M) \to \mathcal{E}
+\]
+
+% ------------------------------------------------------------
+% EVENT → WORLD COUPLING
+% ------------------------------------------------------------
+
+\section*{Event → World Coupling}
+
+World update from event:
+
+\[
+W' = O_{E_i}(W)
+\quad \text{if } \Theta_i(W) = 1
+\]
+
+Event influence on world:
+
+\[
+\Delta W_i
+= f(Z, F, M, \mathcal{P}, r)
+\]
+
+% ------------------------------------------------------------
+% GOVERNANCE
+% ------------------------------------------------------------
+
+\section*{Governance}
+
+\[
+G(E_i) = E_i
+\quad \text{iff stable}
+\]
+
+Otherwise:
+
+\[
+G(E_i) = \Pi(E_i)
+\]
+
+% ------------------------------------------------------------
+% STABILITY
+% ------------------------------------------------------------
+
+\section*{Event Stability}
+
+\[
+\|\mathcal{R}_{FS}(O_{E_i})\| < \epsilon
+\]
+
+\[
+\|\mathcal{H}_{FS}(O_{E_i})\| < \delta
+\]
+
+% ============================================================
