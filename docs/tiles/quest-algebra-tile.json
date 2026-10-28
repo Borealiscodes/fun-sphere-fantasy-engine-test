@@ -1,0 +1,37 @@
+{
+  "tile": "quest-algebra",
+  "background": "transparent",
+  "size": "1024x1024",
+  "quadrants": {
+    "top_left": {
+      "color": "#7ED321",
+      "label": "Operator Chains",
+      "glyph": "chain-link"
+    },
+    "top_right": {
+      "color": "#D0021B",
+      "label": "Predicate Logic",
+      "glyph": "logic-tree"
+    },
+    "bottom_left": {
+      "color": "#F8E71C",
+      "label": "Tensor Coupling",
+      "glyph": "tensor-field"
+    },
+    "bottom_right": {
+      "color": "#4A4A4A",
+      "label": "Branch Stability",
+      "glyph": "branch-node"
+    }
+  },
+  "centerpiece": {
+    "glyph": "80d-embedding",
+    "color": "#FFFFFF",
+    "opacity": 0.85
+  },
+  "provenance_ring": {
+    "color": "#CCCCCC",
+    "thickness": 12,
+    "label": "QA-GOV-20261028-A9"
+  }
+}
