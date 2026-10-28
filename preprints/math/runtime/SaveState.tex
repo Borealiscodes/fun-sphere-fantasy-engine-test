@@ -1,0 +1,100 @@
+% ============================================================
+% Save State Function — FSFE Runtime Physics
+% Author: Borealis S. Hedling
+% ============================================================
+
+\section*{World State}
+
+\[
+W = (Z, F, M, E, \mathcal{P}, r, Q, I)
+\]
+
+% ------------------------------------------------------------
+% SAVE FUNCTION
+% ------------------------------------------------------------
+
+\section*{Save Function}
+
+\[
+\Sigma : W \to S
+\]
+
+\[
+S = (Z_s, F_s, M_s, E_s, \mathcal{P}_s, r_s, Q_s, I_s)
+\]
+
+Where each component is a governed snapshot:
+
+\[
+Z_s = G(Z),\quad
+F_s = G(F),\quad
+M_s = G(M),\quad
+E_s = G(E)
+\]
+
+\[
+\mathcal{P}_s = G(\mathcal{P}),\quad
+r_s = G(r),\quad
+Q_s = G(Q),\quad
+I_s = G(I)
+\]
+
+% ------------------------------------------------------------
+% LOAD FUNCTION
+% ------------------------------------------------------------
+
+\section*{Load Function}
+
+\[
+\Lambda : S \to W
+\]
+
+\[
+W' = \Lambda(S)
+= (Z_s, F_s, M_s, E_s, \mathcal{P}_s, r_s, Q_s, I_s)
+\]
+
+% ------------------------------------------------------------
+% REVERSIBILITY
+% ------------------------------------------------------------
+
+\section*{Reversibility}
+
+\[
+\Lambda(\Sigma(W)) = W
+\]
+
+\[
+\Sigma(\Lambda(S)) = S
+\]
+
+% ------------------------------------------------------------
+% GOVERNANCE
+% ------------------------------------------------------------
+
+\section*{Governance}
+
+\[
+G(S) = S
+\quad \text{iff all components stable}
+\]
+
+Otherwise:
+
+\[
+G(S) = \Pi(S)
+\]
+
+% ------------------------------------------------------------
+% SAVE-STATE EVOLUTION
+% ------------------------------------------------------------
+
+\section*{Save-State Evolution}
+
+\[
+\frac{\partial S}{\partial t} = 0
+\]
+
+Save‑states are invariant under world evolution.
+
+% ============================================================
