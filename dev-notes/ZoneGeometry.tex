@@ -1,0 +1,127 @@
+% ============================================================
+% Tile → Zone Geometry Spine
+% Fun-Sphere Fantasy Engine
+% Author: Borealis S. Hedling
+% ============================================================
+
+\section*{Tile Geometry}
+
+\[
+T_i = (g_i^{tile}, \mathcal{R}_i^{tile}, \mathcal{H}_i^{tile}, A_i, \Lambda_i^{tile})
+\]
+
+\[
+g_i^{tile} : T_i \times T_i \to \mathbb{R}
+\]
+
+\[
+\mathcal{R}_i^{tile} : T_i \times T_i \times T_i \to T_i
+\]
+
+\[
+\mathcal{H}_i^{tile} = \mathrm{Hol}(g_i^{tile})
+\]
+
+\[
+A_i : T_i \to \mathcal{P}(T_i)
+\]
+
+\[
+E_{spec}^{tile}(v_k^{tile}) = \lambda_k^{tile} v_k^{tile}
+\]
+
+% ------------------------------------------------------------
+
+\section*{Zone Construction}
+
+\[
+Z_i := \mathrm{Zone}(T_i)
+\]
+
+\[
+Z_i = (g_i, \mathcal{R}_i, \mathcal{H}_i, A_i^{zone}, \Lambda_i)
+\]
+
+% ------------------------------------------------------------
+
+\section*{Zone Metric}
+
+\[
+g_i = G(C(L_u(g_i^{tile})))
+\]
+
+% ------------------------------------------------------------
+
+\section*{Zone Curvature}
+
+\[
+\mathcal{R}_i = G(C(L_u(\mathcal{R}_i^{tile})))
+\]
+
+% ------------------------------------------------------------
+
+\section*{Zone Holonomy}
+
+\[
+\mathcal{H}_i = \mathrm{Hol}(g_i)
+\]
+
+\[
+\mathcal{H}_i = G(C(L_u(\mathcal{H}_i^{tile})))
+\]
+
+% ------------------------------------------------------------
+
+\section*{Zone Adjacency}
+
+\[
+A_i^{zone}(Z_j)
+= 
+\begin{cases}
+1 & \text{if } T_j \in A_i(T_i) \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+% ------------------------------------------------------------
+
+\section*{Zone Spectral Ecology}
+
+\[
+v_k = C(L_u(v_k^{tile}))
+\]
+
+\[
+E_{spec}(v_k) = \lambda_k v_k
+\]
+
+% ------------------------------------------------------------
+
+\section*{Zone Fusion Geometry}
+
+\[
+Z_{ij} = \mathcal{F}_{zone}(Z_i, Z_j)
+\]
+
+\[
+\mathcal{F}_{abc}
+= g_{FS}(H_a, H_b)\, v_c
+\]
+
+% ------------------------------------------------------------
+
+\section*{Zone Stability}
+
+\[
+\lambda_k > 0
+\]
+
+\[
+\|\mathcal{R}_i\| < \epsilon
+\]
+
+\[
+\|\mathcal{H}_i\| < \delta
+\]
+
+% ============================================================
